@@ -7,7 +7,7 @@ extends CharacterBody2D
 @export var sprintMultiplier: float = 1.5 
 @export var jumpHeight: int = 500
 @export var gravity: int = 35
-
+var playerSpawn: Vector2 = Vector2.ZERO
 var isSprinting: bool = false 
 var playerInput: Vector2 = Vector2.ZERO 
 
@@ -42,3 +42,9 @@ func movement(delta: float) -> void:
 		position.x += playerVelocity.x * delta
 		velocity.y += playerVelocity.y
 	move_and_slide()
+	checkForFallDeath()
+func checkForFallDeath():
+	if position.y >= 50: 
+		position = playerSpawn
+		
+	

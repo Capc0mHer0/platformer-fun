@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var speed: int = 400
 @export var sprintMultiplier: float = 1.5 
 @export var jumpHeight: int = 500
-@export var gravity: int = 40
+@export var gravity: int = 35
 
 var isSprinting: bool = false 
 var playerInput: Vector2 = Vector2.ZERO 

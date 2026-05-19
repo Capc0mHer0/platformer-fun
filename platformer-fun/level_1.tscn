@@ -141,7 +141,7 @@ position = Vector2(0.3833065, 4.6300354)
 shape = SubResource("RectangleShape2D_ihfcg")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1696885792]
-zoom = Vector2(3, 3)
+zoom = Vector2(2.5, 2.5)
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=480294682]
 tile_set = SubResource("TileSet_5hph3")

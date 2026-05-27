@@ -165,7 +165,7 @@ position = Vector2(5.9247084, 2.7545786)
 scale = Vector2(1.7009431, 1.9423077)
 texture = ExtResource("2_ihfcg")
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=566698252]
+[node name="character" type="Sprite2D" parent="CharacterBody2D" unique_id=566698252]
 texture_filter = 1
 texture = ExtResource("1_hbghi")
 region_enabled = true

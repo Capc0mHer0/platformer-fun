@@ -2,7 +2,6 @@ extends CharacterBody2D
 # This is for player movement  
 # Player shold be able to move and sprint accordingly
 
-@export var sprite: Sprite2D
 @export var speed: int = 400
 @export var sprintMultiplier: float = 1.5 
 @export var jumpHeight: int = 500
@@ -51,7 +50,7 @@ func checkForFallDeath():
 	
 func checkFacingDirection():
 	if Input.is_action_pressed("move_left"):
-		$Sprite2D.flip_h = true
+		$character.flip_h = true
 	if Input.is_action_pressed("move_right"):
-		$Sprite2D.flip_h = false
+		$character.flip_h = false
 	

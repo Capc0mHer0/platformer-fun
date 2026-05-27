@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b8wqvs0jqugd2"]
+
+[ext_resource type="Script" uid="uid://dnkst32cx4u0c" path="res://movement.gd" id="1_kne1u"]
+[ext_resource type="Texture2D" uid="uid://bvk2vphkomul1" path="res://ice.png" id="2_e80uo"]
+[ext_resource type="Texture2D" uid="uid://cvjlatr7hvdcc" path="res://characters.png" id="3_cxr5p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihfcg"]
+size = Vector2(15.112928, 22.505493)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1688831052]
+scale = Vector2(0.99252725, 1.0664063)
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_kne1u")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=381973166]
+zoom = Vector2(2.5, 2.5)
+
+[node name="Ice" type="Sprite2D" parent="Camera2D" unique_id=1546967814]
+position = Vector2(8.947295, 1.8168496)
+scale = Vector2(1.7009431, 1.9423077)
+texture = ExtResource("2_e80uo")
+
+[node name="character" type="Sprite2D" parent="." unique_id=1131932721]
+texture_filter = 1
+texture = ExtResource("3_cxr5p")
+region_enabled = true
+region_rect = Rect2(0, 32, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1631133920]
+position = Vector2(0.8870633, 4.6300364)
+shape = SubResource("RectangleShape2D_ihfcg")

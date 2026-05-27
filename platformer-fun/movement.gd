@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 # This is for player movement  
 # Player shold be able to move and sprint accordingly
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yf5i68344vxm"
-path="res://.godot/imported/swoosh.png-07dd8f463d49f724532e254553aef0df.ctex"
+uid="uid://bt1jdka00wxog"
+path="res://.godot/imported/ground.png-94516a0e17c07d24dc9bea8c7146d64b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://swoosh.png"
-dest_files=["res://.godot/imported/swoosh.png-07dd8f463d49f724532e254553aef0df.ctex"]
+source_file="res://assets/backgrounds/ground.png"
+dest_files=["res://.godot/imported/ground.png-94516a0e17c07d24dc9bea8c7146d64b.ctex"]
 
 [params]
 

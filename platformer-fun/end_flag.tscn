@@ -1,7 +1,8 @@
-[gd_scene format=3 uid="uid://dvudkpcccyekq"]
+[gd_scene format=3 uid="uid://6max7nus0lwh"]
 
 [ext_resource type="Script" uid="uid://db57dsjelq0w" path="res://level_completion.gd" id="1_4anwy"]
 [ext_resource type="Texture2D" uid="uid://ck683spfmbvmi" path="res://flag_red_green.png" id="2_jv4ou"]
+[ext_resource type="AudioStream" uid="uid://rwhuwirpg0xt" path="res://assets/sounds/complete.wav" id="3_jv4ou"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjebc"]
 size = Vector2(23.000214, 50.000015)
@@ -21,5 +22,8 @@ region_rect = Rect2(4, 254, 107, 243)
 position = Vector2(0.11425781, -1.8762207)
 scale = Vector2(4.6420784, 4.7849536)
 shape = SubResource("RectangleShape2D_bjebc")
+
+[node name="CompleteSound" type="AudioStreamPlayer2D" parent="." unique_id=1837935076]
+stream = ExtResource("3_jv4ou")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

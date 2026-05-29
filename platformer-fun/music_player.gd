@@ -13,7 +13,7 @@ func _ready() -> void:
 	play()
 
 func load_songs_from_folder() -> void:
-	var dir: Array[String] = ResourceLoader.list_directory(MUSIC_FOLDER)
+	var dir = ResourceLoader.list_directory(MUSIC_FOLDER)
 	for file_name in dir:
 		# Filter for audio files and ignore Godot import files (.remap)
 		if file_name.ends_with(".mp3") or file_name.ends_with(".wav"):

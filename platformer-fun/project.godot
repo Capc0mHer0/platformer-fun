@@ -15,6 +15,14 @@ run/main_scene="uid://bofu1ihqqqi18"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+driver/mix_rate=48000
+
+[autoload]
+
+MusicPlayer="*uid://cnrsajqkd6nse"
+
 [input]
 
 move_right={

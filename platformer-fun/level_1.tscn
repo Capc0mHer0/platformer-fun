@@ -1,0 +1,151 @@
+[gd_scene format=4 uid="uid://7ahp5kdg60d0"]
+
+[ext_resource type="Texture2D" uid="uid://cvjlatr7hvdcc" path="res://characters.png" id="1_hbghi"]
+[ext_resource type="Script" uid="uid://dnkst32cx4u0c" path="res://movement.gd" id="1_hn12h"]
+[ext_resource type="Texture2D" uid="uid://554ce3tprhs2" path="res://sheet.png" id="2_hn12h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ihfcg"]
+size = Vector2(15.112928, 22.505493)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rka8t"]
+texture = ExtResource("2_hn12h")
+
+[sub_resource type="TileSet" id="TileSet_5hph3"]
+sources/0 = SubResource("TileSetAtlasSource_rka8t")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7kpp"]
+texture = ExtResource("2_hn12h")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+12:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+15:1/0 = 0
+16:1/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+12:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+15:2/0 = 0
+16:2/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+14:3/0 = 0
+15:3/0 = 0
+16:3/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+12:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+15:4/0 = 0
+16:4/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+12:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+11:6/0 = 0
+12:6/0 = 0
+13:6/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+16:6/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bjebc"]
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
+sources/0 = SubResource("TileSetAtlasSource_j7kpp")
+
+[node name="Level 1" type="Node2D" unique_id=1087465627]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=773663568]
+position = Vector2(-8.880434, -0.9374997)
+scale = Vector2(0.99252725, 1.0664063)
+collision_layer = 2
+script = ExtResource("1_hn12h")
+
+[node name="character" type="Sprite2D" parent="CharacterBody2D" unique_id=566698252]
+texture_filter = 1
+texture = ExtResource("1_hbghi")
+region_enabled = true
+region_rect = Rect2(0, 32, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1542137039]
+position = Vector2(0.3833065, 4.6300354)
+shape = SubResource("RectangleShape2D_ihfcg")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1696885792]
+zoom = Vector2(2.5, 2.5)
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=480294682]
+tile_set = SubResource("TileSet_5hph3")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1838614039]
+tile_map_data = PackedByteArray("AAD+/wEAAAAHAAAAAAD//wEAAAAHAAAAAAAAAAEAAAAHAAAAAAABAAEAAAAHAAAAAAACAAEAAAAHAAAAAAADAAEAAAAHAAAAAAAEAAEAAAAHAAAAAAAFAAEAAAAHAAAAAAD5/wEAAAAHAAAAAAD6/wEAAAAHAAAAAAD7/wEAAAAHAAAAAAD8/wEAAAAHAAAAAAD9/wEAAAAHAAAAAAAGAAEAAAAHAAAAAAAHAAEAAAAHAAAAAAAIAAEAAAAHAAAAAAAJAAEAAAAHAAAAAAAKAAEAAAAHAAAAAAALAAEAAAAHAAAAAAAMAAEAAAAHAAAAAAANAAEAAAAHAAAAAAAOAAEAAAAHAAAAAAAPAAEAAAAHAAAAAAAQAAEAAAAHAAAAAAARAAEAAAAHAAAAAAASAAEAAAAHAAAAAAATAAEAAAAHAAAAAAAUAAEAAAAHAAAAAAAVAAEAAAAHAAAAAAAWAAEAAAAHAAAAAAAXAAEAAAAHAAAAAAAYAAEAAAAHAAAAAAAZAAEAAAAHAAAAAAAaAAEAAAAHAAAAAAAbAAEAAAAHAAAAAAAcAAEAAAAHAAAAAADt/wEAAAAHAAAAAADu/wEAAAAHAAAAAADv/wEAAAAHAAAAAADw/wEAAAAHAAAAAADx/wEAAAAHAAAAAADy/wEAAAAHAAAAAADz/wEAAAAHAAAAAAD0/wEAAAAHAAAAAAD1/wEAAAAHAAAAAAD2/wEAAAAHAAAAAAD3/wEAAAAHAAAAAAD4/wEAAAAHAAAAAAAgAAAAAAAHAAAAAAAhAAAAAAAHAAAAAAAiAAAAAAAHAAAAAAAmAP7/AAAHAAAAAAAnAP7/AAAHAAAAAAAoAP7/AAAHAAAAAAApAP7/AAAHAAAAAAAqAP7/AAAHAAAAAAAtAPz/AAAHAAAAAAAuAPz/AAAHAAAAAAAvAPz/AAAHAAAAAAA=")
+tile_set = SubResource("TileSet_bjebc")

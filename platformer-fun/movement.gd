@@ -21,6 +21,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_pressed("move_left"):
 		playerInput.x = -1
 	if Input.is_action_pressed("move_up") and is_on_floor():
+		$JumpSound.play()
 		playerInput.y = -1
 	else:
 		playerInput.y = 0
@@ -44,11 +45,13 @@ func movement(delta: float) -> void:
 	move_and_slide()
 	checkForFallDeath()
 	checkFacingDirection()
+
 func checkForFallDeath():
-	if position.y >= 50: 
+	if position.y >= 50:
+		$DeathSound.play()
 		position = playerSpawn
 		
-	
+
 func checkFacingDirection():
 	if Input.is_action_pressed("move_left"):
 		$character.flip_h = true

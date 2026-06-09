@@ -134,5 +134,5 @@ texture = ExtResource("1_2norr")
 
 [resource]
 physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 2
+physics_layer_0/collision_mask = 10
 sources/0 = SubResource("TileSetAtlasSource_j7kpp")

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://1s8c7r15rbai"]
 
-[ext_resource type="Script" uid="uid://bkkd8o0n0t6sx" path="res://main_menu.gd" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://bkkd8o0n0t6sx" path="res://gui/main_menu.gd" id="1_06t4h"]
+[ext_resource type="PackedScene" uid="uid://c2p7kajmkvxow" path="res://gui/settings.tscn" id="2_7vrkn"]
 
 [node name="MainMenu" type="Control" unique_id=90294234]
 layout_mode = 3
@@ -10,6 +11,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_06t4h")
+settingsScene = ExtResource("2_7vrkn")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1391265766]
 layout_mode = 1

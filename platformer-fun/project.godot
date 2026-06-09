@@ -11,12 +11,13 @@ config_version=5
 [application]
 
 config/name="Platformer_fun"
-run/main_scene="uid://bofu1ihqqqi18"
+run/main_scene="uid://1s8c7r15rbai"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [audio]
 
+buses/default_bus_layout="uid://babe62iw83opu"
 driver/mix_rate=48000
 
 [autoload]

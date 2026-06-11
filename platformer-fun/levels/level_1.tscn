@@ -3,7 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://6max7nus0lwh" path="res://interactables/end_flag.tscn" id="1_bt44k"]
 [ext_resource type="PackedScene" uid="uid://b8wqvs0jqugd2" path="res://Player.tscn" id="2_kx6l7"]
 [ext_resource type="PackedScene" uid="uid://bj73qcgtn7nnn" path="res://levels/GreenSlime.tscn" id="2_n46q3"]
+[ext_resource type="Script" uid="uid://b12tikfymvjc" path="res://RedSlimeMovement.gd" id="3_btoec"]
 [ext_resource type="TileSet" uid="uid://dpiju2lqyil3b" path="res://assets/tile_maps/ground_tilemap.tres" id="3_n46q3"]
+[ext_resource type="Texture2D" uid="uid://clnwc2siox2sb" path="res://assets/sprites/Red Slime.png" id="4_gwceb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l53as"]
+size = Vector2(29, 9)
 
 [node name="Level 1" type="Node2D" unique_id=1087465627]
 
@@ -12,6 +17,19 @@ position = Vector2(-8.880434, -0.9374997)
 
 [node name="CharacterBody2D2" parent="." unique_id=1667255226 instance=ExtResource("2_n46q3")]
 position = Vector2(101, -43)
+
+[node name="CharacterBody2D3" type="CharacterBody2D" parent="." unique_id=291842072]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("3_btoec")
+
+[node name="RedSlime" type="Sprite2D" parent="CharacterBody2D3" unique_id=1250267904]
+position = Vector2(172, -37)
+texture = ExtResource("4_gwceb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D3" unique_id=796067004]
+position = Vector2(170.5, -25.5)
+shape = SubResource("RectangleShape2D_l53as")
 
 [node name="Area2D" parent="." unique_id=379006929 instance=ExtResource("1_bt44k")]
 position = Vector2(1249.475, -88.60791)

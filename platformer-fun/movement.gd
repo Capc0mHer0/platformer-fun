@@ -48,8 +48,7 @@ func movement(delta: float) -> void:
 
 func checkForFallDeath():
 	if position.y >= 50:
-		$DeathSound.play()
-		position = playerSpawn
+		killPlayer()
 		
 
 func checkFacingDirection():
@@ -58,3 +57,11 @@ func checkFacingDirection():
 	if Input.is_action_pressed("move_right"):
 		$character.flip_h = false
 	
+func killPlayer(): 
+	$DeathSound.play()
+	position = playerSpawn
+	
+
+
+func _on_player_hurt_box_body_entered(body: Node2D) -> void:
+	killPlayer()

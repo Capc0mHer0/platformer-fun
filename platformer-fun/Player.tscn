@@ -7,7 +7,10 @@
 [ext_resource type="AudioStream" uid="uid://w6h3dd8iti0i" path="res://assets/sounds/death.wav" id="5_cxr5p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihfcg"]
-size = Vector2(15.112928, 22.505493)
+size = Vector2(11.082819, 15.941391)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cxr5p"]
+size = Vector2(15.112935, 22.505493)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1688831052]
 scale = Vector2(0.99252725, 1.0664063)
@@ -30,7 +33,7 @@ region_enabled = true
 region_rect = Rect2(0, 32, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1631133920]
-position = Vector2(0.8870633, 4.6300364)
+position = Vector2(0.5037642, 7.970696)
 shape = SubResource("RectangleShape2D_ihfcg")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=944287065]
@@ -38,3 +41,14 @@ stream = ExtResource("4_e80uo")
 
 [node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=820593192]
 stream = ExtResource("5_cxr5p")
+
+[node name="PlayerHurtBox" type="Area2D" parent="." unique_id=539979327]
+collision_layer = 2
+collision_mask = 8
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PlayerHurtBox" unique_id=963419894]
+position = Vector2(0.5037646, 4.6886444)
+shape = SubResource("RectangleShape2D_cxr5p")
+debug_color = Color(0.9168353, 0.27352363, 0.23508272, 0.41960785)
+
+[connection signal="body_entered" from="PlayerHurtBox" to="." method="_on_player_hurt_box_body_entered"]

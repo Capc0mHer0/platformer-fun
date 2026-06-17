@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bkkd8o0n0t6sx" path="res://gui/main_menu.gd" id="1_06t4h"]
 [ext_resource type="PackedScene" uid="uid://c2p7kajmkvxow" path="res://gui/settings.tscn" id="2_7vrkn"]
+[ext_resource type="PackedScene" uid="uid://c41qy1turquae" path="res://gui/level_select.tscn" id="3_rhnsr"]
 
 [node name="MainMenu" type="Control" unique_id=90294234]
 layout_mode = 3
@@ -12,6 +13,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_06t4h")
 settingsScene = ExtResource("2_7vrkn")
+levelSelectScene = ExtResource("3_rhnsr")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1391265766]
 layout_mode = 1
@@ -45,6 +47,11 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Start Game"
 
+[node name="LevelSelectButton" type="Button" parent="VBoxContainer" unique_id=1416476005]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Level Select"
+
 [node name="SettingsButton" type="Button" parent="VBoxContainer" unique_id=1395449538]
 layout_mode = 2
 size_flags_vertical = 3
@@ -56,5 +63,6 @@ size_flags_vertical = 3
 text = "Exit"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/EndGame" to="." method="_on_end_game_pressed"]

@@ -16,3 +16,10 @@ func advanceToNextScene() -> void:
 		print("Could not find current scene in levels array: ", get_tree().current_scene.scene_file_path)
 	else:
 		get_tree().change_scene_to_file(levels[currentSceneIndex + 1])
+
+func loadLevel(level: int) -> void:
+	if level > levels.size():
+		print("Tried to change to level which does not exist: ", level)
+		return
+	get_tree().change_scene_to_file(levels[level - 1])
+	

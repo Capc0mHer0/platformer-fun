@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://c41qy1turquae"]
+
+[ext_resource type="Texture2D" uid="uid://b6g1j4lacgkpb" path="res://assets/sprites/death-skull.svg" id="1_0jo8p"]
+[ext_resource type="Script" uid="uid://b1ru3o7xbmuaa" path="res://gui/level_select.gd" id="1_6f0w6"]
+
+[node name="LevelSelect" type="Control" unique_id=1627906341]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6f0w6")
+
+[node name="LevelButtons" type="GridContainer" parent="." unique_id=1044027691]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="LevelButtons" unique_id=144444013]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="1" type="Button" parent="LevelButtons/MarginContainer" unique_id=229329056]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "1"
+
+[node name="MarginContainer2" type="MarginContainer" parent="LevelButtons" unique_id=1671787604]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="2" type="Button" parent="LevelButtons/MarginContainer2" unique_id=1151439189]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "2"
+
+[node name="MarginContainer3" type="MarginContainer" parent="LevelButtons" unique_id=862294004]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="3" type="Button" parent="LevelButtons/MarginContainer3" unique_id=526282181]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "3"
+
+[node name="MarginContainer4" type="MarginContainer" parent="LevelButtons" unique_id=1391964838]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="4" type="Button" parent="LevelButtons/MarginContainer4" unique_id=1595806076]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "4"
+
+[node name="MarginContainer5" type="MarginContainer" parent="LevelButtons" unique_id=1395246882]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="5" type="Button" parent="LevelButtons/MarginContainer5" unique_id=470652749]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "5"
+
+[node name="MarginContainer6" type="MarginContainer" parent="LevelButtons" unique_id=1513708606]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="6" type="Button" parent="LevelButtons/MarginContainer6" unique_id=1687291535]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "6"
+
+[node name="MarginContainer7" type="MarginContainer" parent="LevelButtons" unique_id=589175777]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="7" type="Button" parent="LevelButtons/MarginContainer7" unique_id=1256302801]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "7"
+
+[node name="MarginContainer8" type="MarginContainer" parent="LevelButtons" unique_id=143396427]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="8" type="Button" parent="LevelButtons/MarginContainer8" unique_id=353925727]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "8"
+
+[node name="MarginContainer9" type="MarginContainer" parent="LevelButtons" unique_id=1393311192]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="9" type="Button" parent="LevelButtons/MarginContainer9" unique_id=120959648]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+icon = ExtResource("1_0jo8p")
+icon_alignment = 1
+expand_icon = true
+
+[node name="BackButton" type="Button" parent="." unique_id=91230905]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.85
+anchor_right = 0.65
+anchor_bottom = 0.95
+offset_top = -0.22399902
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Back"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

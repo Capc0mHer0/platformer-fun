@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://cow8d1kwqb2y3"]
+
+[ext_resource type="Texture2D" uid="uid://bod8x65uww0u7" path="res://assets/sprites/spring.png" id="1_aguix"]
+[ext_resource type="Script" uid="uid://psoluqpy1inf" path="res://interactables/spring.gd" id="1_dd664"]
+[ext_resource type="AudioStream" uid="uid://djls66ivfrb5k" path="res://assets/sounds/spring-boing.wav" id="3_0gjgp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dd664"]
+atlas = ExtResource("1_aguix")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0gjgp"]
+atlas = ExtResource("1_aguix")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qt8l6"]
+atlas = ExtResource("1_aguix")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epp5e"]
+atlas = ExtResource("1_aguix")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_725pf"]
+atlas = ExtResource("1_aguix")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo4o5"]
+atlas = ExtResource("1_aguix")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3ho2"]
+atlas = ExtResource("1_aguix")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03ew6"]
+atlas = ExtResource("1_aguix")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hawa0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd664")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0gjgp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qt8l6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epp5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_725pf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bo4o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3ho2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03ew6")
+}],
+"loop": false,
+"name": &"active",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dd664")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aguix"]
+size = Vector2(38, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dd664"]
+size = Vector2(60.5, 38)
+
+[node name="Spring" type="Node2D" unique_id=1803988609]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_dd664")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=313521088]
+position = Vector2(1, -52)
+sprite_frames = SubResource("SpriteFrames_hawa0")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Hitbox" type="StaticBody2D" parent="." unique_id=969679240]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1526320580]
+position = Vector2(2, -16)
+shape = SubResource("RectangleShape2D_aguix")
+
+[node name="Jumpbox" type="Area2D" parent="." unique_id=1190348772]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jumpbox" unique_id=1623920970]
+position = Vector2(0.75, -50)
+shape = SubResource("RectangleShape2D_dd664")
+
+[node name="BoingSound" type="AudioStreamPlayer2D" parent="." unique_id=785415286]
+stream = ExtResource("3_0gjgp")
+
+[connection signal="body_entered" from="Jumpbox" to="." method="_on_jumpbox_body_entered"]

@@ -9,7 +9,7 @@ class_name Player
 @export var gravity: int = 35
 var playerSpawn: Vector2 = Vector2.ZERO
 var isSprinting: bool = false 
-var playerInput: Vector2 = Vector2.ZERO 
+var playerInput: Vector2 = Vector2.ZERO
 
 func _process(delta: float) -> void:
 	movement(delta)
@@ -49,7 +49,6 @@ func movement(delta: float) -> void:
 func checkForFallDeath():
 	if position.y >= 50:
 		killPlayer()
-		
 
 func checkFacingDirection():
 	if Input.is_action_pressed("move_left"):
@@ -60,7 +59,9 @@ func checkFacingDirection():
 func killPlayer(): 
 	$DeathSound.play()
 	position = playerSpawn
-	
+
+func launch(launchVelocity: int = -700):
+	velocity.y = launchVelocity
 
 
 func _on_player_hurt_box_body_entered(body: Node2D) -> void:

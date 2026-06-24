@@ -9,3 +9,10 @@ func _physics_process(_delta: float) -> void:
 	if not is_on_floor():
 		velocity.y = gravity
 	move_and_slide()
+
+func kill_Slime():
+	self.queue_free()
+	
+
+func _on_slime_body_entered(body: Node2D) -> void:
+	kill_Slime()

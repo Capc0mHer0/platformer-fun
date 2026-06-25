@@ -10,7 +10,7 @@
 size = Vector2(11.082819, 15.941391)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxr5p"]
-size = Vector2(15.112935, 22.505493)
+size = Vector2(15.112935, 23.443224)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1688831052]
 scale = Vector2(0.99252725, 1.0664063)
@@ -44,10 +44,10 @@ stream = ExtResource("5_cxr5p")
 
 [node name="PlayerHurtBox" type="Area2D" parent="." unique_id=539979327]
 collision_layer = 2
-collision_mask = 8
+collision_mask = 24
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="PlayerHurtBox" unique_id=963419894]
-position = Vector2(0.5037646, 4.6886444)
+position = Vector2(0.5037646, 5.15751)
 shape = SubResource("RectangleShape2D_cxr5p")
 debug_color = Color(0.9168353, 0.27352363, 0.23508272, 0.41960785)
 

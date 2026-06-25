@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://0kt3nifteymr"]
 
-[ext_resource type="Script" uid="uid://b12tikfymvjc" path="res://RedSlimeMovement.gd" id="1_awoam"]
+[ext_resource type="Script" uid="uid://b12tikfymvjc" path="res://enemies/RedSlimeMovement.gd" id="1_awoam"]
 [ext_resource type="Texture2D" uid="uid://clnwc2siox2sb" path="res://assets/sprites/Red Slime.png" id="2_ks4d8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l53as"]

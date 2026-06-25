@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bj73qcgtn7nnn"]
 
-[ext_resource type="Script" uid="uid://cvcqbv8kbgp31" path="res://GreenSlimeMovement.gd" id="1_5c1ih"]
+[ext_resource type="Script" uid="uid://cvcqbv8kbgp31" path="res://enemies/GreenSlimeMovement.gd" id="1_5c1ih"]
 [ext_resource type="Texture2D" uid="uid://cbsi03whcmam7" path="res://assets/sprites/slime-guy.png" id="2_1watl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btoec"]

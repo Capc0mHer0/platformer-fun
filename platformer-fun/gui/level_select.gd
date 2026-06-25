@@ -13,6 +13,7 @@ func _ready():
 
 func on_level_button_pressed(level: String) -> void:
 	SceneManager.loadLevel(level.to_int())
+	self.queue_free()
 
 func _on_back_button_pressed() -> void:
 	levels_back.emit()

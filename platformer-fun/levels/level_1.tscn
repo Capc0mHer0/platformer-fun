@@ -11,7 +11,7 @@
 texture = ExtResource("6_gwceb")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSet" id="TileSet_gwceb"]
 tile_size = Vector2i(32, 32)

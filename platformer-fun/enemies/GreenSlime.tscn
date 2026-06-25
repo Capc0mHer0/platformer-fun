@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bj73qcgtn7nnn"]
 
-[ext_resource type="Script" uid="uid://cvcqbv8kbgp31" path="res://GreenSlimeMovement.gd" id="1_5c1ih"]
+[ext_resource type="Script" uid="uid://cvcqbv8kbgp31" path="res://enemies/GreenSlimeMovement.gd" id="1_5c1ih"]
 [ext_resource type="Texture2D" uid="uid://cbsi03whcmam7" path="res://assets/sprites/slime-guy.png" id="2_1watl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btoec"]
@@ -11,7 +11,7 @@ script/source = "extends Area2D
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1watl"]
-size = Vector2(25, 1)
+size = Vector2(25, 13)
 
 [node name="CharacterBody2D2" type="CharacterBody2D" unique_id=1667255226]
 collision_layer = 8
@@ -31,7 +31,7 @@ collision_mask = 2
 script = SubResource("GDScript_5c1ih")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1966365912]
-position = Vector2(-1.5, 6.5)
+position = Vector2(-1.5, 1)
 shape = SubResource("RectangleShape2D_1watl")
 debug_color = Color(0.9582781, 0.18701398, 0.22880173, 0.41960785)
 

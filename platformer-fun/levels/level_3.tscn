@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://o53xran45tdv"]
 
-[ext_resource type="PackedScene" uid="uid://b8wqvs0jqugd2" path="res://Player.tscn" id="1_16pka"]
+[ext_resource type="PackedScene" uid="uid://b8wqvs0jqugd2" path="res://players/Player.tscn" id="1_16pka"]
 [ext_resource type="PackedScene" uid="uid://6max7nus0lwh" path="res://interactables/end_flag.tscn" id="2_j8bo8"]
 [ext_resource type="TileSet" uid="uid://dpiju2lqyil3b" path="res://assets/tile_maps/ground_tilemap.tres" id="3_1jdk1"]
 [ext_resource type="PackedScene" uid="uid://cow8d1kwqb2y3" path="res://interactables/spring.tscn" id="4_bmgug"]

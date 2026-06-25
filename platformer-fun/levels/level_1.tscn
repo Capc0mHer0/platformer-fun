@@ -9,16 +9,12 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_btoec"]
 texture = ExtResource("6_gwceb")
+texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.17985916, 8, 8, -8, 8, 8)
-1:0/0 = 0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 8, -8, -8, -8, 8, -0.71943474, 8)
-0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, -8, 8, 8, 8, 8, -8)
-1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 0.17985916, -8)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_gwceb"]
+tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 16
 physics_layer_0/collision_mask = 11
 sources/0 = SubResource("TileSetAtlasSource_btoec")
@@ -45,5 +41,6 @@ tile_map_data = PackedByteArray("AAD+/wEAAAAHAAAAAAD//wEAAAAHAAAAAAAAAAEAAAAHAAA
 tile_set = ExtResource("3_n46q3")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1498929086]
-tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAACAAAAAAABAAAAAAA=")
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_gwceb")

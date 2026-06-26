@@ -5,19 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bj73qcgtn7nnn" path="res://enemies/GreenSlime.tscn" id="2_n46q3"]
 [ext_resource type="PackedScene" uid="uid://0kt3nifteymr" path="res://enemies/RedSlime.tscn" id="3_btoec"]
 [ext_resource type="TileSet" uid="uid://dpiju2lqyil3b" path="res://assets/tile_maps/ground_tilemap.tres" id="3_n46q3"]
-[ext_resource type="Texture2D" uid="uid://b7t8lndql5cn5" path="res://assets/sprites/spike.png" id="6_gwceb"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_btoec"]
-texture = ExtResource("6_gwceb")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -16, 16, 16, -16, 16)
-
-[sub_resource type="TileSet" id="TileSet_gwceb"]
-tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 16
-physics_layer_0/collision_mask = 11
-sources/0 = SubResource("TileSetAtlasSource_btoec")
+[ext_resource type="TileSet" uid="uid://ci8dw363ro4ec" path="res://assets/tile_maps/spikes_map.tres" id="6_btoec"]
 
 [node name="Level 1" type="Node2D" unique_id=1087465627]
 
@@ -43,4 +31,4 @@ tile_set = ExtResource("3_n46q3")
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1498929086]
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAA=")
-tile_set = SubResource("TileSet_gwceb")
+tile_set = ExtResource("6_btoec")

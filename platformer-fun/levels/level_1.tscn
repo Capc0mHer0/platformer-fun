@@ -5,7 +5,42 @@
 [ext_resource type="PackedScene" uid="uid://bj73qcgtn7nnn" path="res://enemies/GreenSlime.tscn" id="2_n46q3"]
 [ext_resource type="PackedScene" uid="uid://0kt3nifteymr" path="res://enemies/RedSlime.tscn" id="3_btoec"]
 [ext_resource type="TileSet" uid="uid://dpiju2lqyil3b" path="res://assets/tile_maps/ground_tilemap.tres" id="3_n46q3"]
+[ext_resource type="Texture2D" uid="uid://br5ydw2lod40l" path="res://assets/sprites/Purple Slime.png" id="4_gwceb"]
+[ext_resource type="Script" uid="uid://ujbkcvg2yxbc" path="res://PurpleSlimeMovement.gd" id="4_l53as"]
 [ext_resource type="TileSet" uid="uid://ci8dw363ro4ec" path="res://assets/tile_maps/spikes_map.tres" id="6_btoec"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l53as"]
+atlas = ExtResource("4_gwceb")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sk1a"]
+atlas = ExtResource("4_gwceb")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_08mmt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l53as")
+}],
+"loop": true,
+"name": &"asleep",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sk1a")
+}],
+"loop": true,
+"name": &"awake",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ot28"]
+size = Vector2(33.25, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l53as"]
+size = Vector2(27, 14)
 
 [node name="Level 1" type="Node2D" unique_id=1087465627]
 
@@ -20,6 +55,32 @@ collision_mask = 27
 [node name="CharacterBody2D3" parent="." unique_id=1636052976 instance=ExtResource("3_btoec")]
 collision_mask = 27
 
+[node name="CharacterBody2D4" type="CharacterBody2D" parent="." unique_id=1081827105]
+collision_layer = 8
+collision_mask = 27
+script = ExtResource("4_l53as")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D4" unique_id=1796635378]
+position = Vector2(179, -31.999998)
+scale = Vector2(1.1406251, 0.99999994)
+sprite_frames = SubResource("SpriteFrames_08mmt")
+animation = &"asleep"
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D4" unique_id=760560726]
+position = Vector2(213.625, 11.5)
+scale = Vector2(1, 0.99999994)
+shape = SubResource("RectangleShape2D_5ot28")
+
+[node name="Area2D2" type="Area2D" parent="CharacterBody2D4" unique_id=1508700816]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D4/Area2D2" unique_id=998554178]
+position = Vector2(213.5, 0)
+shape = SubResource("RectangleShape2D_l53as")
+debug_color = Color(0.8808553, 0.12570006, 0.1563128, 0.41960785)
+
 [node name="Area2D" parent="." unique_id=379006929 instance=ExtResource("1_bt44k")]
 position = Vector2(1249.475, -88.60791)
 collision_mask = 3
@@ -32,3 +93,5 @@ tile_set = ExtResource("3_n46q3")
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAA=")
 tile_set = ExtResource("6_btoec")
+
+[connection signal="body_entered" from="CharacterBody2D4/Area2D2" to="CharacterBody2D4" method="_on_area_2d_2_body_entered"]

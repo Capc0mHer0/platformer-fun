@@ -60,7 +60,7 @@ func killPlayer():
 	$DeathSound.play()
 	position = playerSpawn
 
-func launch(launchVelocity: int = -700):
+func launch(launchVelocity: int = -750):
 	velocity.y = launchVelocity
 
 

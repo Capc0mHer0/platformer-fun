@@ -9,7 +9,7 @@
 [node name="Level4" type="Node2D" unique_id=1344709414]
 
 [node name="CharacterBody2D" parent="." unique_id=1688831052 instance=ExtResource("2_t6q73")]
-position = Vector2(407, -61)
+position = Vector2(0, 13)
 
 [node name="Flag" parent="." unique_id=379006929 instance=ExtResource("1_t0qhu")]
 position = Vector2(1080, -87)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://6max7nus0lwh"]
 
-[ext_resource type="Script" uid="uid://db57dsjelq0w" path="res://interactables/level_completion.gd" id="1_4anwy"]
+[ext_resource type="Script" uid="uid://db57dsjelq0w" path="res://interactables/end_flag.gd" id="1_4anwy"]
 [ext_resource type="Texture2D" uid="uid://ck683spfmbvmi" path="res://assets/sprites/flag_red_green.png" id="2_jv4ou"]
 [ext_resource type="AudioStream" uid="uid://rwhuwirpg0xt" path="res://assets/sounds/complete.wav" id="3_jv4ou"]
 

@@ -14,7 +14,7 @@ var playerInput: Vector2 = Vector2.ZERO
 func _process(delta: float) -> void:
 	movement(delta)
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(_event: InputEvent) -> void:
 	playerInput = Vector2.ZERO
 	if Input.is_action_pressed("move_right"):
 		playerInput.x = 1
@@ -57,12 +57,12 @@ func checkFacingDirection():
 		$character.flip_h = false
 	
 func killPlayer(): 
-	$DeathSound.play()
-	position = playerSpawn
+	DeathSoundPlayer.play()
+	SceneManager.call_deferred("restartLevel")
 
 func launch(launchVelocity: int = -750):
 	velocity.y = launchVelocity
 
 
-func _on_player_hurt_box_body_entered(body: Node2D) -> void:
+func _on_player_hurt_box_body_entered(_body: Node2D) -> void:
 	killPlayer()

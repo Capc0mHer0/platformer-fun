@@ -24,6 +24,7 @@ driver/mix_rate=48000
 
 MusicPlayer="*uid://cnrsajqkd6nse"
 SceneManager="*uid://m540pg3v2xg2"
+DeathSoundPlayer="*uid://fd0x2hewdpd1"
 
 [input]
 

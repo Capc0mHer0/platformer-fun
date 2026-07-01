@@ -5,8 +5,8 @@ class_name Player
 
 @export var speed: int = 400
 @export var sprintMultiplier: float = 1.5 
-@export var jumpHeight: int = 500
-@export var gravity: int = 35
+@export var jumpHeight: int = 400
+@export var gravity: int = 1300
 var playerSpawn: Vector2 = Vector2.ZERO
 var isSprinting: bool = false 
 var playerInput: Vector2 = Vector2.ZERO
@@ -32,19 +32,19 @@ func _unhandled_input(_event: InputEvent) -> void:
 func movement(delta: float) -> void:
 	var playerVelocity: Vector2 = playerInput
 	if not is_on_floor():
-		playerVelocity.y = gravity
+		playerVelocity.y = gravity * delta
 	else:
 		playerVelocity.y = playerInput.y * jumpHeight
 
 	if Input.is_action_just_pressed("sprint"):
 		isSprinting = !isSprinting
 
-	if playerVelocity.length() > 0:
-		playerVelocity.x = playerVelocity.x * speed
-		if isSprinting:
-			playerVelocity.x *= sprintMultiplier
-		position.x += playerVelocity.x * delta
-		velocity.y += playerVelocity.y
+	playerVelocity.x = playerVelocity.x * speed
+	if isSprinting:
+		playerVelocity.x *= sprintMultiplier
+	velocity.x = move_toward(velocity.x, playerVelocity.x, delta*10000)
+	print(playerVelocity.x, " " , velocity.x)
+	velocity.y += playerVelocity.y
 	move_and_slide()
 	checkForFallDeath()
 	checkFacingDirection()
@@ -63,7 +63,7 @@ func killPlayer():
 	DeathSoundPlayer.play()
 	SceneManager.call_deferred("restartLevel")
 
-func launch(launchVelocity: int = -700):
+func launch(launchVelocity: int = -550):
 	velocity.y = launchVelocity
 
 

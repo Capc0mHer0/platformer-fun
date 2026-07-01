@@ -11,6 +11,9 @@ var playerSpawn: Vector2 = Vector2.ZERO
 var isSprinting: bool = false 
 var playerInput: Vector2 = Vector2.ZERO
 
+func _ready():
+	playerSpawn = position
+
 func _process(delta: float) -> void:
 	movement(delta)
 
@@ -60,7 +63,7 @@ func killPlayer():
 	DeathSoundPlayer.play()
 	SceneManager.call_deferred("restartLevel")
 
-func launch(launchVelocity: int = -750):
+func launch(launchVelocity: int = -700):
 	velocity.y = launchVelocity
 
 

@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://554ce3tprhs2" path="res://assets/tile_maps/sheet.png" id="1_2norr"]
 
+[sub_resource type="TileMapPattern" id="TileMapPattern_pp6lw"]
+tile_data = PackedInt32Array(0, 655360, 2, 65536, 655360, 3, 1, 720896, 2, 65537, 720896, 1, 2, 786432, 2, 65538, 786432, 3)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7kpp"]
 texture = ExtResource("1_2norr")
 0:0/0 = 0
@@ -136,3 +139,4 @@ texture = ExtResource("1_2norr")
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 10
 sources/0 = SubResource("TileSetAtlasSource_j7kpp")
+pattern_0 = SubResource("TileMapPattern_pp6lw")

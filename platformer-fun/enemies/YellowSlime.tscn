@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b6yffwnpu75qt"]
 
-[ext_resource type="Script" uid="uid://cj4glol1ofsnj" path="res://levels/YellowSlimeMovement.gd" id="1_4807t"]
+[ext_resource type="Script" uid="uid://cj4glol1ofsnj" path="res://enemies/YellowSlimeMovement.gd" id="1_4807t"]
 [ext_resource type="Texture2D" uid="uid://cliwy1l1bpcbe" path="res://assets/sprites/yellow Slime.png" id="2_6c61t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ot28"]

@@ -3,7 +3,7 @@ class_name RedSlime
 
 func _physics_process(_delta: float) -> void:
 	if is_on_floor():
-		position.x -= 1
+		position.x -= 2
 	if not is_on_floor():
 		velocity.y = gravity
 	move_and_slide()

@@ -16,15 +16,17 @@ position = Vector2(-41, -2)
 collision_mask = 21
 
 [node name="CharacterBody2D2" parent="." unique_id=1667255226 instance=ExtResource("2_n46q3")]
-position = Vector2(116, -1)
+position = Vector2(256, 0)
 collision_mask = 27
 
 [node name="CharacterBody2D3" parent="." unique_id=1636052976 instance=ExtResource("3_btoec")]
+position = Vector2(-7, 37)
 collision_mask = 27
 
 [node name="CharacterBody2D4" parent="." unique_id=951673905 instance=ExtResource("4_gwceb")]
 
 [node name="CharacterBody2D5" parent="." unique_id=2034222891 instance=ExtResource("5_l53as")]
+position = Vector2(52, 76)
 
 [node name="Area2D" parent="." unique_id=379006929 instance=ExtResource("1_bt44k")]
 position = Vector2(1249.475, -88.60791)
@@ -36,5 +38,5 @@ tile_set = ExtResource("3_n46q3")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1498929086]
 scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAAAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAATAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAVAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAA=")
 tile_set = ExtResource("6_btoec")

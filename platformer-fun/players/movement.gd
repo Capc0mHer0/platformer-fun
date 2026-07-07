@@ -43,7 +43,6 @@ func movement(delta: float) -> void:
 	if isSprinting:
 		playerVelocity.x *= sprintMultiplier
 	velocity.x = move_toward(velocity.x, playerVelocity.x, delta*10000)
-	print(playerVelocity.x, " " , velocity.x)
 	velocity.y += playerVelocity.y
 	move_and_slide()
 	checkForFallDeath()

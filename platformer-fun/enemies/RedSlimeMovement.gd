@@ -1,7 +1,5 @@
-extends CharacterBody2D
+extends SlimeMovement
 class_name RedSlime
-
-@export var gravity: int = 50
 
 func _physics_process(_delta: float) -> void:
 	if is_on_floor():
@@ -9,10 +7,10 @@ func _physics_process(_delta: float) -> void:
 	if not is_on_floor():
 		velocity.y = gravity
 	move_and_slide()
+	super(_delta)
 
-func kill_Slime():
-	self.queue_free()
-	
 
-func _on_slime_body_entered(body: Node2D) -> void:
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	kill_Slime()

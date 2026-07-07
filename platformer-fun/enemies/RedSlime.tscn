@@ -31,4 +31,4 @@ position = Vector2(170.5, -36.5)
 shape = SubResource("RectangleShape2D_awoam")
 debug_color = Color(0.994899, 0.042695068, 0.13772187, 0.41960785)
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_slime_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

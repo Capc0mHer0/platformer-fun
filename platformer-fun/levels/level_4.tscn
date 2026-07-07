@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://yarqc2vtm7v1"]
 
 [ext_resource type="PackedScene" uid="uid://6max7nus0lwh" path="res://interactables/end_flag.tscn" id="1_t0qhu"]
+[ext_resource type="Texture2D" uid="uid://bvsliwfra867s" path="res://assets/backgrounds/cave.png" id="2_hokjj"]
 [ext_resource type="PackedScene" uid="uid://b8wqvs0jqugd2" path="res://players/Player.tscn" id="2_t6q73"]
 [ext_resource type="TileSet" uid="uid://dpiju2lqyil3b" path="res://assets/tile_maps/ground_tilemap.tres" id="4_0fd8o"]
 [ext_resource type="TileSet" uid="uid://ci8dw363ro4ec" path="res://assets/tile_maps/spikes_map.tres" id="5_t6q73"]
@@ -9,6 +10,7 @@
 
 [node name="CharacterBody2D" parent="." unique_id=1688831052 instance=ExtResource("2_t6q73")]
 position = Vector2(-31, -428)
+backgroundImage = ExtResource("2_hokjj")
 
 [node name="Ground" type="TileMapLayer" parent="." unique_id=1722537546]
 position = Vector2(0, -288)

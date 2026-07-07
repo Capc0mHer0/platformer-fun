@@ -3,16 +3,19 @@ class_name Player
 # This is for player movement  
 # Player shold be able to move and sprint accordingly
 
+@export var backgroundImage: Texture2D
 @export var speed: int = 400
 @export var sprintMultiplier: float = 1.5 
 @export var jumpHeight: int = 400
 @export var gravity: int = 1300
+@onready var background: Sprite2D = $Camera2D/Ice
 var playerSpawn: Vector2 = Vector2.ZERO
 var isSprinting: bool = false 
 var playerInput: Vector2 = Vector2.ZERO
 
 func _ready():
 	playerSpawn = position
+	background.texture = backgroundImage
 
 func _process(delta: float) -> void:
 	movement(delta)

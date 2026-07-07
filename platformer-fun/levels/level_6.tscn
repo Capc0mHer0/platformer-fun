@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cpski4p3anpag"]
 
 [ext_resource type="PackedScene" uid="uid://6max7nus0lwh" path="res://interactables/end_flag.tscn" id="1_t0qhu"]
+[ext_resource type="Texture2D" uid="uid://bvsliwfra867s" path="res://assets/backgrounds/cave.png" id="2_rqsg2"]
 [ext_resource type="PackedScene" uid="uid://b8wqvs0jqugd2" path="res://players/Player.tscn" id="2_t6q73"]
 [ext_resource type="PackedScene" uid="uid://cow8d1kwqb2y3" path="res://interactables/spring.tscn" id="3_hokjj"]
 [ext_resource type="TileSet" uid="uid://dpiju2lqyil3b" path="res://assets/tile_maps/ground_tilemap.tres" id="4_0fd8o"]
@@ -10,6 +11,7 @@
 
 [node name="CharacterBody2D" parent="." unique_id=1688831052 instance=ExtResource("2_t6q73")]
 position = Vector2(0, 13)
+backgroundImage = ExtResource("2_rqsg2")
 
 [node name="Flag" parent="." unique_id=379006929 instance=ExtResource("1_t0qhu")]
 position = Vector2(1080, -87)

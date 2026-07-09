@@ -20,7 +20,7 @@ script = ExtResource("1_kne1u")
 backgroundImage = ExtResource("2_e80uo")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=381973166]
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(1.5, 1.5)
 
 [node name="Ice" type="Sprite2D" parent="Camera2D" unique_id=1546967814]
 position = Vector2(2.015059, 1.875458)

@@ -25,6 +25,17 @@ driver/mix_rate=48000
 MusicPlayer="*uid://cnrsajqkd6nse"
 SceneManager="*uid://m540pg3v2xg2"
 DeathSoundPlayer="*uid://fd0x2hewdpd1"
+ResolutionManager="*uid://biebg01vfxbym"
+
+[debug]
+
+gdscript/warnings/integer_division=0
+
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=360
+window/stretch/scale_mode="integer"
 
 [input]
 

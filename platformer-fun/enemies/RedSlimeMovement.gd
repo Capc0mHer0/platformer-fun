@@ -9,5 +9,8 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	super(_delta)
 
+
+
+
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	kill_Slime(body)
+	kill_Slime()

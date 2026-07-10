@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bi3aho0w131j8"]
+[gd_scene format=3 uid="uid://b6yffwnpu75qt"]
 
 [ext_resource type="Script" uid="uid://cj4glol1ofsnj" path="res://enemies/YellowSlimeMovement.gd" id="1_4807t"]
 [ext_resource type="Texture2D" uid="uid://cliwy1l1bpcbe" path="res://assets/sprites/yellow Slime.png" id="2_6c61t"]
@@ -7,7 +7,7 @@
 size = Vector2(29, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aerfg"]
-size = Vector2(25, 6.5)
+size = Vector2(25, 13.5)
 
 [node name="CharacterBody2D5" type="CharacterBody2D" unique_id=2034222891]
 collision_layer = 8
@@ -15,11 +15,11 @@ collision_mask = 27
 script = ExtResource("1_4807t")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2005818589]
-position = Vector2(2, -11)
+position = Vector2(237, -76)
 texture = ExtResource("2_6c61t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=99563854]
-position = Vector2(0.5, 0.5)
+position = Vector2(235.5, -64.5)
 shape = SubResource("RectangleShape2D_5ot28")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=170743564]
@@ -27,7 +27,7 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=939830627]
-position = Vector2(0.5, -6.5)
+position = Vector2(235.5, -75.75)
 shape = SubResource("RectangleShape2D_aerfg")
 debug_color = Color(0.84342897, 0.107279785, 0.13430479, 0.41960785)
 

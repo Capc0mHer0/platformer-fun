@@ -10,4 +10,4 @@ func _physics_process(_delta: float) -> void:
 	super(_delta)
 
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
-	kill_Slime(body)
+	kill_Slime()

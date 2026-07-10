@@ -69,7 +69,5 @@ func launch(launchVelocity: int = -550):
 	velocity.y = launchVelocity
 
 
-func _on_player_hurt_box_body_entered(body: Node2D) -> void:
-	if body is SlimeMovement and not body.is_dead:
-		return
+func _on_player_hurt_box_body_entered(_body: Node2D) -> void:
 	killPlayer()

@@ -10,5 +10,5 @@ func _physics_process(_delta: float) -> void:
 	super(_delta)
 	
 func _on_slime_hurt_box_body_entered(body: Node2D) -> void:
-	kill_Slime(body)
+	kill_Slime()
 	

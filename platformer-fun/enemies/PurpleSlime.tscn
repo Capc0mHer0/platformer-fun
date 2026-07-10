@@ -34,7 +34,7 @@ animations = [{
 size = Vector2(33.25, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l53as"]
-size = Vector2(27, 14)
+size = Vector2(27, 6.5)
 
 [node name="CharacterBody2D4" type="CharacterBody2D" unique_id=951673905]
 collision_layer = 8
@@ -42,14 +42,14 @@ collision_mask = 27
 script = ExtResource("1_g2yr8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1138462113]
-position = Vector2(179, -31.999998)
+position = Vector2(-34, -44)
 scale = Vector2(1.1406251, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_08mmt")
 animation = &"asleep"
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1984559928]
-position = Vector2(213.625, 11.5)
+position = Vector2(0.625, -0.5000019)
 scale = Vector2(1, 0.99999994)
 shape = SubResource("RectangleShape2D_5ot28")
 
@@ -58,7 +58,7 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=88769217]
-position = Vector2(213.5, 0)
+position = Vector2(0.5, -8.500002)
 shape = SubResource("RectangleShape2D_l53as")
 debug_color = Color(0.8808553, 0.12570006, 0.1563128, 0.41960785)
 

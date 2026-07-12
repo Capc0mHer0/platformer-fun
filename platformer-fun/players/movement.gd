@@ -12,10 +12,16 @@ class_name Player
 var playerSpawn: Vector2 = Vector2.ZERO
 var isSprinting: bool = false 
 var playerInput: Vector2 = Vector2.ZERO
+var previousPosition: Vector2
+var previousVelocity: Vector2
 
 func _ready():
 	playerSpawn = position
 	background.texture = backgroundImage
+	
+func _physics_process(_delta) -> void:
+	previousPosition = global_position
+	previousVelocity = velocity
 
 func _process(delta: float) -> void:
 	movement(delta)
@@ -69,5 +75,7 @@ func launch(launchVelocity: int = -550):
 	velocity.y = launchVelocity
 
 
-func _on_player_hurt_box_body_entered(_body: Node2D) -> void:
+func _on_player_hurt_box_body_entered(body: Node2D) -> void:
+	if body is SlimeMovement and body.is_player_stomping_me(self):
+		return
 	killPlayer()

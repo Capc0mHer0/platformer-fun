@@ -7,7 +7,7 @@
 size = Vector2(29, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1watl"]
-size = Vector2(25, 13)
+size = Vector2(31.25, 4.5)
 
 [node name="CharacterBody2D2" type="CharacterBody2D" unique_id=1667255226]
 collision_layer = 8
@@ -15,10 +15,11 @@ collision_mask = 11
 script = ExtResource("1_5c1ih")
 
 [node name="GreenSlime" type="Sprite2D" parent="." unique_id=634719969]
+position = Vector2(2, -16)
 texture = ExtResource("2_1watl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=438280028]
-position = Vector2(-1.5, 11.5)
+position = Vector2(0.5, -4.5)
 shape = SubResource("RectangleShape2D_btoec")
 
 [node name="Area2D2" type="Area2D" parent="." unique_id=928994702]
@@ -26,7 +27,7 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1966365912]
-position = Vector2(-1.5, 1)
+position = Vector2(0.375, -11)
 shape = SubResource("RectangleShape2D_1watl")
 debug_color = Color(0.9582781, 0.18701398, 0.22880173, 0.41960785)
 

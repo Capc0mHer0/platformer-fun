@@ -14,6 +14,8 @@ var isSprinting: bool = false
 var playerInput: Vector2 = Vector2.ZERO
 var previousPosition: Vector2
 var previousVelocity: Vector2
+var playerfacing = "right"
+
 
 func _ready():
 	playerSpawn = position
@@ -64,8 +66,11 @@ func checkForFallDeath():
 func checkFacingDirection():
 	if Input.is_action_pressed("move_left"):
 		$character.flip_h = true
+		playerfacing = "left"
 	if Input.is_action_pressed("move_right"):
 		$character.flip_h = false
+		playerfacing = "right"
+	return playerfacing
 	
 func killPlayer(): 
 	DeathSoundPlayer.play()

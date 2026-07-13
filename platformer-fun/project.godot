@@ -38,6 +38,10 @@ window/size/viewport_height=360
 window/size/resizable=false
 window/stretch/scale_mode="integer"
 
+[global_group]
+
+player=""
+
 [input]
 
 move_right={

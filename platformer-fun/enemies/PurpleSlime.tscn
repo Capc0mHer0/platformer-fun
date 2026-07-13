@@ -41,11 +41,12 @@ collision_layer = 8
 collision_mask = 27
 script = ExtResource("1_g2yr8")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1138462113]
+[node name="purple" type="AnimatedSprite2D" parent="." unique_id=1138462113]
 position = Vector2(-33, -48)
 scale = Vector2(1.1406251, 0.99999994)
 sprite_frames = SubResource("SpriteFrames_08mmt")
-animation = &"asleep"
+animation = &"awake"
+frame_progress = 0.90326345
 centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1984559928]

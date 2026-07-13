@@ -20,6 +20,7 @@ script = ExtResource("1_kne1u")
 backgroundImage = ExtResource("2_e80uo")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=381973166]
+position = Vector2(-0.12046426, -15.882784)
 zoom = Vector2(1.5, 1.5)
 
 [node name="Ice" type="Sprite2D" parent="Camera2D" unique_id=1546967814]
@@ -28,21 +29,25 @@ texture = ExtResource("2_e80uo")
 
 [node name="character" type="Sprite2D" parent="." unique_id=1131932721]
 texture_filter = 1
+position = Vector2(-0.12046426, -15.882784)
 texture = ExtResource("3_cxr5p")
 region_enabled = true
 region_rect = Rect2(0, 32, 32, 32)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1631133920]
-position = Vector2(0.5037642, 7.970696)
+position = Vector2(0.38329995, -7.912088)
 shape = SubResource("RectangleShape2D_ihfcg")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=944287065]
+position = Vector2(-0.12046426, -15.882784)
 stream = ExtResource("4_e80uo")
 
 [node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=820593192]
+position = Vector2(-0.12046426, -15.882784)
 stream = ExtResource("5_cxr5p")
 
 [node name="PlayerHurtBox" type="Area2D" parent="." unique_id=539979327]
+position = Vector2(-0.12046426, -15.882784)
 collision_layer = 2
 collision_mask = 24
 

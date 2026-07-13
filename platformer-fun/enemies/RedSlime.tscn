@@ -7,7 +7,7 @@
 size = Vector2(29, 9)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_awoam"]
-size = Vector2(25, 13)
+size = Vector2(31, 4)
 
 [node name="CharacterBody2D3" type="CharacterBody2D" unique_id=1636052976]
 collision_layer = 8
@@ -15,11 +15,11 @@ collision_mask = 11
 script = ExtResource("1_awoam")
 
 [node name="RedSlime" type="Sprite2D" parent="." unique_id=588634309]
-position = Vector2(172, -37)
+position = Vector2(2, -16)
 texture = ExtResource("2_ks4d8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=326565143]
-position = Vector2(170.5, -25.5)
+position = Vector2(0.5, -4.5)
 shape = SubResource("RectangleShape2D_l53as")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1175840839]
@@ -27,7 +27,7 @@ collision_layer = 8
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=49056406]
-position = Vector2(170.5, -36.5)
+position = Vector2(0.5, -11)
 shape = SubResource("RectangleShape2D_awoam")
 debug_color = Color(0.994899, 0.042695068, 0.13772187, 0.41960785)
 

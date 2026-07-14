@@ -1,7 +1,6 @@
 extends Area2D
 
 var levelComplete: PackedScene = preload("res://gui/level_complete.tscn")
-
 var hasCompleted: bool = false
 
 func _on_body_entered(body: Node2D) -> void:
@@ -11,5 +10,6 @@ func _on_body_entered(body: Node2D) -> void:
 		# in perfect world we load the scene while waiting for the sound to
 		# finish playing
 		await $CompleteSound.finished
-		
+		## TODO: implement level time
+		GameDataManager.update_level_progress(get_parent().levelName, 30)
 		get_tree().root.add_child(levelComplete.instantiate())

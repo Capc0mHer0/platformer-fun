@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cpski4p3anpag"]
 
+[ext_resource type="Script" uid="uid://dl8utvs3a1cde" path="res://levels/level.gd" id="1_fpvgn"]
 [ext_resource type="PackedScene" uid="uid://6max7nus0lwh" path="res://interactables/end_flag.tscn" id="1_t0qhu"]
 [ext_resource type="Texture2D" uid="uid://bvsliwfra867s" path="res://assets/backgrounds/cave.png" id="2_rqsg2"]
 [ext_resource type="PackedScene" uid="uid://b8wqvs0jqugd2" path="res://players/Player.tscn" id="2_t6q73"]
@@ -8,6 +9,8 @@
 [ext_resource type="TileSet" uid="uid://ci8dw363ro4ec" path="res://assets/tile_maps/spikes_map.tres" id="5_t6q73"]
 
 [node name="Level6" type="Node2D" unique_id=1344709414]
+script = ExtResource("1_fpvgn")
+levelName = "Spike Hell"
 
 [node name="CharacterBody2D" parent="." unique_id=1688831052 instance=ExtResource("2_t6q73")]
 position = Vector2(0, 13)

@@ -13,6 +13,7 @@ size = Vector2(31, 4)
 collision_layer = 8
 collision_mask = 11
 script = ExtResource("1_awoam")
+speed = -140.0
 
 [node name="RedSlime" type="Sprite2D" parent="." unique_id=588634309]
 position = Vector2(2, -16)
@@ -24,7 +25,7 @@ shape = SubResource("RectangleShape2D_l53as")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1175840839]
 collision_layer = 8
-collision_mask = 3
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=49056406]
 position = Vector2(0.5, -11)

@@ -11,7 +11,7 @@ size = Vector2(31, 4)
 
 [node name="CharacterBody2D5" type="CharacterBody2D" unique_id=2034222891]
 collision_layer = 8
-collision_mask = 27
+collision_mask = 26
 script = ExtResource("1_4807t")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2005818589]

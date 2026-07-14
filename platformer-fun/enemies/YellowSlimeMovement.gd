@@ -2,7 +2,7 @@ extends SlimeMovement
 class_name YellowSlime
 
 func _physics_process(_delta: float) -> void:
-	velocity.x = -70
+	velocity.x = speed
 	move_and_slide()
 	super(_delta)
 

@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name SlimeMovement
 
 @export var gravity: int = 50
+@export var speed: float = -70
 
 func _physics_process(_delta: float) -> void:
 	for i in get_slide_collision_count(): 

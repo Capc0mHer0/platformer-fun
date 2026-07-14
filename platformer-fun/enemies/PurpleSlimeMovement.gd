@@ -1,7 +1,7 @@
 extends SlimeMovement
 class_name PurpleSlime
 
-@onready var player_node = $"../CharacterBody2D"
+@onready var player_node = $"../Player"
 @onready var slime = $purple
 
 var slimeCurrentFacing = "left"
@@ -17,16 +17,16 @@ func _physics_process(_delta: float) -> void:
 func checkForChase():
 	var playerFacing = grabPlayerFacing()
 	if playerFacing == "left" and slimeCurrentFacing == "left":
-		position.x -= 1
+		velocity.x = speed
 		$purple.play("awake")
 	elif playerFacing == "right" and slimeCurrentFacing == "right":
-		position.x += 1
+		velocity.x = -speed
 		$purple.play("awake")
 	else:
+		velocity.x = 0
 		$purple.play("asleep")
 		
 func checkSlimeFacingDirection():
-	var playerFacing = grabPlayerFacing()
 	if player_node.position.x > position.x and slimeCurrentFacing == "left":
 		$purple.flip_h = true
 		slimeCurrentFacing = "right"

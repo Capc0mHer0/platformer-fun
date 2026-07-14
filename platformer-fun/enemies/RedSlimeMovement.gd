@@ -2,8 +2,11 @@ extends SlimeMovement
 class_name RedSlime
 
 func _physics_process(_delta: float) -> void:
+	if is_on_wall():
+		$RedSlime.flip_h = !$RedSlime.flip_h
+		speed *= -1
 	if is_on_floor():
-		velocity.x = -140
+		velocity.x = speed
 	if not is_on_floor():
 		velocity.y = gravity
 	move_and_slide()

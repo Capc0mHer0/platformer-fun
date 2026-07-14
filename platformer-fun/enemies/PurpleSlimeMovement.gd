@@ -28,7 +28,7 @@ func checkForChase():
 func checkSlimeFacingDirection():
 	var playerFacing = grabPlayerFacing()
 	if player_node.position.x > position.x and slimeCurrentFacing == "left":
-		$purple.flip_h = true 
+		$purple.flip_h = true
 		slimeCurrentFacing = "right"
 	
 	if player_node.position.x < position.x and slimeCurrentFacing == "right":
@@ -38,7 +38,7 @@ func checkSlimeFacingDirection():
 	return slimeCurrentFacing
 	
 ## grabbing the facing direction from the player in movement.gd
-func grabPlayerFacing():            
+func grabPlayerFacing():
 	var currentfacing = player_node.checkFacingDirection()
 	return currentfacing
 

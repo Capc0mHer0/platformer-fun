@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://b6yffwnpu75qt"]
+[gd_scene format=3 uid="uid://citksy7vxdxpe"]
 
-[ext_resource type="Script" uid="uid://cj4glol1ofsnj" path="res://enemies/YellowSlimeMovement.gd" id="1_4807t"]
-[ext_resource type="Texture2D" uid="uid://cliwy1l1bpcbe" path="res://assets/sprites/yellow Slime.png" id="1_m2p6a"]
+[ext_resource type="Script" uid="uid://dvmlhwbvg5apa" path="res://enemies/GhostSlimeMovement.gd" id="1_try6i"]
+[ext_resource type="Texture2D" uid="uid://eo0ss06umgfo" path="res://assets/sprites/ghostslime.png" id="2_wg3lh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ot28"]
 size = Vector2(31, 9.25)
@@ -12,11 +12,11 @@ size = Vector2(33, 4)
 [node name="CharacterBody2D5" type="CharacterBody2D" unique_id=2034222891]
 collision_layer = 8
 collision_mask = 26
-script = ExtResource("1_4807t")
+script = ExtResource("1_try6i")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2005818589]
 position = Vector2(3, -16)
-texture = ExtResource("1_m2p6a")
+texture = ExtResource("2_wg3lh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=99563854]
 position = Vector2(2.5, -5.625)

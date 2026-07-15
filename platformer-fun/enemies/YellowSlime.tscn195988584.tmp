@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b6yffwnpu75qt"]
+
+[ext_resource type="Texture2D" uid="uid://cliwy1l1bpcbe" path="res://assets/sprites/yellow Slime.png" id="1_m2p6a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nmsli"]
+size = Vector2(30, 9)
+
+[node name="YellowSlime" type="CharacterBody2D" unique_id=947593819]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=577226711]
+position = Vector2(13, -10)
+texture = ExtResource("1_m2p6a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=842493663]
+position = Vector2(11, 1.5)
+shape = SubResource("RectangleShape2D_nmsli")

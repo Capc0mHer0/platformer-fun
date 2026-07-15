@@ -17,3 +17,4 @@ func _on_slime_hurt_box_body_entered(body: Node2D) -> void:
 func flip_direction() -> void:
 	$GreenSlime.flip_h = !$GreenSlime.flip_h
 	speed *= -1
+	$RayCast2D.target_position.x *= -1

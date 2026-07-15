@@ -17,3 +17,4 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func flip_direction() -> void:
 	$RedSlime.flip_h = !$RedSlime.flip_h
 	speed *= -1
+	$RayCast2D.target_position.x *= -1

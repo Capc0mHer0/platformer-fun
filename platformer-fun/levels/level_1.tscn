@@ -48,15 +48,3 @@ tile_set = ExtResource("3_n46q3")
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAATAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAVAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAA=")
 tile_set = ExtResource("6_btoec")
-
-[node name="YellowSlime2" parent="." unique_id=1106544516 instance=ExtResource("5_l53as")]
-position = Vector2(306, -30)
-
-[node name="YellowSlime3" parent="." unique_id=41670519 instance=ExtResource("5_l53as")]
-position = Vector2(-369, 25)
-
-[node name="YellowSlime4" parent="." unique_id=870905516 instance=ExtResource("5_l53as")]
-position = Vector2(-402, 25)
-
-[node name="YellowSlime5" parent="." unique_id=275894716 instance=ExtResource("5_l53as")]
-position = Vector2(-336, 25)

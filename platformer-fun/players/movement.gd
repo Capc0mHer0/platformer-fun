@@ -15,8 +15,6 @@ var playerInput: Vector2 = Vector2.ZERO
 var previousPosition: Vector2
 var previousVelocity: Vector2
 var playerfacing = "right"
-var stompInvulnerabilityPeriod = .15
-var stompInvulnerabilityTimer = 0
 
 
 func _ready():
@@ -29,7 +27,6 @@ func _physics_process(_delta) -> void:
 
 func _process(delta: float) -> void:
 	movement(delta)
-	_reduceStompInvulnerabilityTimer(delta)
 
 func _unhandled_input(_event: InputEvent) -> void:
 	playerInput = Vector2.ZERO
@@ -82,13 +79,8 @@ func killPlayer():
 func launch(launchVelocity: int = -550):
 	velocity.y = launchVelocity
 
+
 func _on_player_hurt_box_body_entered(body: Node2D) -> void:
 	if body is SlimeMovement and body.is_player_stomping_me(self):
-		stompInvulnerabilityTimer = stompInvulnerabilityPeriod
 		return
-	if stompInvulnerabilityTimer <= 0:
-		killPlayer()
-
-func _reduceStompInvulnerabilityTimer(delta: float) -> void:
-	if stompInvulnerabilityTimer > 0:
-		stompInvulnerabilityTimer -= delta
+	killPlayer()

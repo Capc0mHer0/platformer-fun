@@ -24,6 +24,7 @@ position = Vector2(-0.12046426, -15.882784)
 zoom = Vector2(1.5, 1.5)
 
 [node name="Ice" type="Sprite2D" parent="Camera2D" unique_id=1546967814]
+z_index = -1
 position = Vector2(2.015059, 1.875458)
 texture = ExtResource("2_e80uo")
 

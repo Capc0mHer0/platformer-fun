@@ -10,5 +10,5 @@ func _on_body_entered(body: Node2D) -> void:
 		# in perfect world we load the scene while waiting for the sound to
 		# finish playing
 		await $CompleteSound.finished
-		GameDataManager.update_level_progress(get_parent().levelName, $Timer.time)
+		GameDataManager.update_level_progress(SceneManager.getLevelIndex(), $Timer.time)
 		get_tree().root.add_child(levelComplete.instantiate())

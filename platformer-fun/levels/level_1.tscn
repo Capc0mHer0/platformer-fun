@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://bofu1ihqqqi18"]
 
-[ext_resource type="Script" uid="uid://dl8utvs3a1cde" path="res://levels/level.gd" id="1_3sk1a"]
 [ext_resource type="PackedScene" uid="uid://6max7nus0lwh" path="res://interactables/end_flag.tscn" id="1_bt44k"]
 [ext_resource type="PackedScene" uid="uid://b8wqvs0jqugd2" path="res://players/Player.tscn" id="2_kx6l7"]
 [ext_resource type="PackedScene" uid="uid://bj73qcgtn7nnn" path="res://enemies/GreenSlime.tscn" id="2_n46q3"]
@@ -12,8 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://citksy7vxdxpe" path="res://enemies/GhostSlime.tscn" id="10_5ot28"]
 
 [node name="Level 1" type="Node2D" unique_id=1087465627]
-script = ExtResource("1_3sk1a")
-levelName = "Grass Fields"
 
 [node name="Player" parent="." unique_id=1688831052 groups=["player"] instance=ExtResource("2_kx6l7")]
 position = Vector2(-23, 9)

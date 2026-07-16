@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://crqxvno381rnt"]
 
-[ext_resource type="Script" uid="uid://dl8utvs3a1cde" path="res://levels/level.gd" id="1_cicrg"]
 [ext_resource type="PackedScene" uid="uid://b8wqvs0jqugd2" path="res://players/Player.tscn" id="2_5cm8g"]
 [ext_resource type="PackedScene" uid="uid://cow8d1kwqb2y3" path="res://interactables/spring.tscn" id="2_86l0o"]
 [ext_resource type="PackedScene" uid="uid://bj73qcgtn7nnn" path="res://enemies/GreenSlime.tscn" id="3_86l0o"]
@@ -13,8 +12,6 @@
 [ext_resource type="TileSet" uid="uid://ci8dw363ro4ec" path="res://assets/tile_maps/spikes_map.tres" id="10_ydmfm"]
 
 [node name="Level 7" type="Node2D" unique_id=1087465627]
-script = ExtResource("1_cicrg")
-levelName = "Mountain Hike"
 
 [node name="GreenSlime2" parent="." unique_id=1667255226 instance=ExtResource("3_86l0o")]
 position = Vector2(510, 15)

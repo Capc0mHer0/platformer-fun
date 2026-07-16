@@ -12,7 +12,7 @@ const levels: Array[String] = [
 	"res://levels/level_7.tscn"]
 
 func advanceToNextScene() -> void:
-	var currentSceneIndex := levels.find(get_tree().current_scene.scene_file_path)
+	var currentSceneIndex := getLevelIndex()
 	if currentSceneIndex >= levels.size() - 1:
 		get_tree().quit()
 	elif currentSceneIndex == -1:
@@ -29,3 +29,6 @@ func loadLevel(level: int) -> void:
 func restartLevel() -> void:
 	var currentSceneIndex := levels.find(get_tree().current_scene.scene_file_path)
 	get_tree().change_scene_to_file(levels[currentSceneIndex])
+
+func getLevelIndex() -> int:
+	return levels.find(get_tree().current_scene.scene_file_path)

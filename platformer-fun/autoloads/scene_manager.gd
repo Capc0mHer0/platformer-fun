@@ -9,7 +9,7 @@ const levels: Array[String] = [
 	"res://levels/level_4.tscn",
 	"res://levels/level_5.tscn",
 	"res://levels/level_6.tscn",
-]
+	"res://levels/level_7.tscn"]
 
 func advanceToNextScene() -> void:
 	var currentSceneIndex := levels.find(get_tree().current_scene.scene_file_path)

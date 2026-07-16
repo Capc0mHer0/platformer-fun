@@ -46,7 +46,7 @@ func _unhandled_input(_event: InputEvent) -> void:
 func movement(delta: float) -> void:
 	var playerVelocity: Vector2 = playerInput
 	if not is_on_floor():
-		playerVelocity.y += gravity * delta
+		playerVelocity.y = gravity * delta
 	else:
 		playerVelocity.y = playerInput.y * jumpHeight
 

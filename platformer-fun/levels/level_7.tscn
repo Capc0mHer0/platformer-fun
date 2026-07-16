@@ -14,7 +14,7 @@
 
 [node name="Level 7" type="Node2D" unique_id=1087465627]
 script = ExtResource("1_cicrg")
-levelName = "Grass Fields"
+levelName = "Mountain Hike"
 
 [node name="GreenSlime2" parent="." unique_id=1667255226 instance=ExtResource("3_86l0o")]
 position = Vector2(510, 15)

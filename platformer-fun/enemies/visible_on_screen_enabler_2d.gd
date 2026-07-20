@@ -1,1 +1,0 @@
-extends VisibleOnScreenEnabler2D

@@ -31,4 +31,10 @@ position = Vector2(2.5, -12)
 shape = SubResource("RectangleShape2D_aerfg")
 debug_color = Color(0.84342897, 0.107279785, 0.13430479, 0.41960785)
 
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1668818424]
+position = Vector2(1, -8)
+rect = Rect2(-14, -2, 31, 9)
+
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="screen_entered" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

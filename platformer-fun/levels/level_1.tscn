@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bj73qcgtn7nnn" path="res://enemies/GreenSlime.tscn" id="2_n46q3"]
 [ext_resource type="TileSet" uid="uid://dpiju2lqyil3b" path="res://assets/tile_maps/ground_tilemap.tres" id="3_n46q3"]
 [ext_resource type="TileSet" uid="uid://ci8dw363ro4ec" path="res://assets/tile_maps/spikes_map.tres" id="6_btoec"]
+[ext_resource type="PackedScene" uid="uid://citksy7vxdxpe" path="res://enemies/GhostSlime.tscn" id="10_5ot28"]
 
 [node name="Level 1" type="Node2D" unique_id=1087465627]
 
@@ -40,3 +41,6 @@ tile_set = ExtResource("3_n46q3")
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AAATAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAAVAAAAAAAAAAAAAAAWAAAAAAAAAAAAAAA5APv/AAAAAAAAAAA6APv/AAAAAAAAAAA7APv/AAAAAAAAAABNAPv/AAAAAAAAAABjAPr/AAAAAAAAAABkAPr/AAAAAAAAAAA=")
 tile_set = ExtResource("6_btoec")
+
+[node name="CharacterBody2D5" parent="." unique_id=2034222891 instance=ExtResource("10_5ot28")]
+position = Vector2(218, -8)

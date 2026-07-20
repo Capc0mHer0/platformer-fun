@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dvmlhwbvg5apa" path="res://enemies/GhostSlimeMovement.gd" id="1_try6i"]
 [ext_resource type="Texture2D" uid="uid://eo0ss06umgfo" path="res://assets/sprites/ghostslime.png" id="2_wg3lh"]
-[ext_resource type="Script" uid="uid://cutv8dc7isa24" path="res://enemies/visible_on_screen_enabler_2d.gd" id="3_wg3lh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ot28"]
 size = Vector2(31, 9.25)
@@ -35,7 +34,6 @@ debug_color = Color(0.84342897, 0.107279785, 0.13430479, 0.41960785)
 [node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1668818424]
 position = Vector2(1, -8)
 rect = Rect2(-14, -2, 31, 9)
-script = ExtResource("3_wg3lh")
 
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
 [connection signal="screen_entered" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_entered"]

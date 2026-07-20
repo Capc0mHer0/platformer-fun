@@ -1,7 +1,7 @@
 extends SlimeMovement
 class_name GhostSlime
 
-var onscreen = 0
+var onscreen = false
 
 func _physics_process(_delta: float) -> void:
 	velocity.x = 0
@@ -17,8 +17,8 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 
 
 func _on_visible_on_screen_enabler_2d_screen_entered() -> void:
-	onscreen = 1
+	onscreen = true
 
 
 func _on_visible_on_screen_enabler_2d_screen_exited() -> void:
-	onscreen = 0
+	onscreen = false

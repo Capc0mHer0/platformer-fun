@@ -4,8 +4,7 @@ class_name GhostSlime
 var onscreen = false
 
 func _physics_process(_delta: float) -> void:
-	velocity.x = 0
-	if onscreen == 1:
+	if onscreen == true:
 		velocity.x = speed
 	else:
 		velocity.x = 0

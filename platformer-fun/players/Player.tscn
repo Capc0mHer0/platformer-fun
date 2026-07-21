@@ -12,7 +12,7 @@ size = Vector2(11.082819, 15.941391)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxr5p"]
 size = Vector2(15.112935, 23.443224)
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1688831052]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1688831052 groups=["player"]]
 scale = Vector2(0.99252725, 1.0664063)
 collision_layer = 2
 collision_mask = 5

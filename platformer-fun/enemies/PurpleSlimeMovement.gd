@@ -1,7 +1,7 @@
 extends SlimeMovement
 class_name PurpleSlime
 
-@onready var player_node = $"../Player"
+@onready var player_node = get_tree().get_nodes_in_group("player")[0]
 @onready var slime = $purple
 
 var slimeCurrentFacing = "left"

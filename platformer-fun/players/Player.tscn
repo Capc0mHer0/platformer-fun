@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cvjlatr7hvdcc" path="res://assets/sprites/characters.png" id="3_cxr5p"]
 [ext_resource type="AudioStream" uid="uid://wmdrc73b50id" path="res://assets/sounds/jump.wav" id="4_e80uo"]
 [ext_resource type="AudioStream" uid="uid://w6h3dd8iti0i" path="res://assets/sounds/death.wav" id="5_cxr5p"]
+[ext_resource type="Script" uid="uid://cfug1ylxomhyd" path="res://players/pause_handler.gd" id="6_tjsbv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihfcg"]
 size = Vector2(11.082819, 15.941391)
@@ -56,5 +57,8 @@ collision_mask = 24
 position = Vector2(0.5037646, 5.15751)
 shape = SubResource("RectangleShape2D_cxr5p")
 debug_color = Color(0.9168353, 0.27352363, 0.23508272, 0.41960785)
+
+[node name="PauseHandler" type="Node2D" parent="." unique_id=1111954624]
+script = ExtResource("6_tjsbv")
 
 [connection signal="body_entered" from="PlayerHurtBox" to="." method="_on_player_hurt_box_body_entered"]

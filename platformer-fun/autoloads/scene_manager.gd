@@ -11,6 +11,9 @@ const levels: Array[String] = [
 	"res://levels/level_6.tscn",
 	"res://levels/level_7.tscn",
 	"res://levels/level_8.tscn"]
+	
+const pauseScene = preload("res://gui/pause.tscn")
+const mainMenu = "res://gui/main_menu.tscn"
 
 func advanceToNextScene() -> void:
 	var currentSceneIndex := getLevelIndex()
@@ -33,3 +36,9 @@ func restartLevel() -> void:
 
 func getLevelIndex() -> int:
 	return levels.find(get_tree().current_scene.scene_file_path)
+
+func goToMainMenu() -> int:
+	return get_tree().change_scene_to_file(mainMenu)
+
+func addPauseScene() -> void:
+	get_tree().root.add_child(pauseScene.instantiate())

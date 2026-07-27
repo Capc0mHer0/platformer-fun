@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://0arfgyo7ssk3"]
+
+[ext_resource type="PackedScene" uid="uid://ce4mdouontpm0" path="res://enemies/boss/HealthBar.tscn" id="1_e2edv"]
+[ext_resource type="Script" uid="uid://cem24gdf1v0id" path="res://enemies/boss/king_slime.gd" id="1_yaqfl"]
+
+[node name="KingSlime" type="Node2D" unique_id=602595480]
+script = ExtResource("1_yaqfl")
+
+[node name="HealthBar" parent="." unique_id=1624499435 instance=ExtResource("1_e2edv")]

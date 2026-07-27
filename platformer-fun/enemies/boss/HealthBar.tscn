@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://ce4mdouontpm0"]
+
+[ext_resource type="Script" uid="uid://df4wju1e4nt4o" path="res://enemies/boss/health_bar.gd" id="1_b7wgw"]
+[ext_resource type="Texture2D" uid="uid://lm8y71m3i73h" path="res://assets/sprites/health_bar.png" id="1_dkhmi"]
+
+[node name="HealthBar" type="CanvasLayer" unique_id=1624499435]
+script = ExtResource("1_b7wgw")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2012391966]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.1
+grow_horizontal = 2
+
+[node name="Control" type="Control" parent="CenterContainer" unique_id=717243720]
+layout_mode = 2
+
+[node name="HealthBar" type="ColorRect" parent="CenterContainer/Control" unique_id=1105669513]
+layout_mode = 0
+offset_left = -226.0
+offset_top = -9.0
+offset_right = 226.0
+offset_bottom = 9.0
+color = Color(0, 0.72485834, 0.72485846, 1)
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=699956267]
+clip_contents = true
+layout_mode = 2
+texture = ExtResource("1_dkhmi")
+stretch_mode = 4

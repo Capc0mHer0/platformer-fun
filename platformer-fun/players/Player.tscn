@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://wmdrc73b50id" path="res://assets/sounds/jump.wav" id="4_e80uo"]
 [ext_resource type="AudioStream" uid="uid://w6h3dd8iti0i" path="res://assets/sounds/death.wav" id="5_cxr5p"]
 [ext_resource type="Script" uid="uid://cfug1ylxomhyd" path="res://players/pause_handler.gd" id="6_tjsbv"]
+[ext_resource type="PackedScene" uid="uid://bbtpkbtn6o2wj" path="res://players/Sword.tscn" id="7_6n4dj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihfcg"]
 size = Vector2(11.082819, 15.941391)
@@ -35,6 +36,11 @@ position = Vector2(-0.12046426, -15.882784)
 texture = ExtResource("3_cxr5p")
 region_enabled = true
 region_rect = Rect2(0, 32, 32, 32)
+
+[node name="Sword" parent="character" unique_id=82494842 instance=ExtResource("7_6n4dj")]
+visible = false
+position = Vector2(9.188226, 10.256411)
+scale = Vector2(0.5, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1631133920]
 position = Vector2(0.38329995, -7.912088)

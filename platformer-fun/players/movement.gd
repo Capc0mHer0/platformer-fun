@@ -68,11 +68,11 @@ func checkForFallDeath():
 
 func checkFacingDirection():
 	if Input.is_action_pressed("move_left"):
-		$character.flip_h = true
+		$character.scale.x = -1 
 		playerfacing = "left"
 	if Input.is_action_pressed("move_right"):
-		$character.flip_h = false
 		playerfacing = "right"
+		$character.scale.x = 1 
 	return playerfacing
 	
 func killPlayer(): 
@@ -81,6 +81,9 @@ func killPlayer():
 
 func launch(launchVelocity: int = -550):
 	velocity.y = launchVelocity
+	
+func obtain_sword():
+	$character/Sword.toggle_sword()
 
 func _on_player_hurt_box_body_entered(body: Node2D) -> void:
 	if body is SlimeMovement and body.is_player_stomping_me(self):

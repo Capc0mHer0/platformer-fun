@@ -92,6 +92,7 @@ swing_sword={
 2d_physics/layer_4="Enemies"
 2d_physics/layer_5="Hazards"
 2d_physics/layer_6="pedestal"
+2d_physics/layer_7="Blockoff"
 
 [physics]
 

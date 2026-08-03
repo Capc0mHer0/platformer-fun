@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cmfer2r1pwhu7" path="res://assets/sprites/pedestal.png" id="3_8bky6"]
 [ext_resource type="Script" uid="uid://ksq0wdhmn0j8" path="res://interactables/Pedestal.gd" id="3_igtvg"]
 [ext_resource type="Texture2D" uid="uid://cxfnu16d7ktgw" path="res://assets/sprites/shiny sword.png" id="4_igtvg"]
+[ext_resource type="Script" uid="uid://1it4tj5il7wu" path="res://levels/entrance_block_off.gd" id="6_ylt4s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ylt4s"]
 size = Vector2(16, 29)
@@ -66,6 +67,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_076sl"]
+size = Vector2(16, 64)
+
 [node name="Level 9" type="Node2D" unique_id=1007605207]
 
 [node name="Player" parent="." unique_id=1688831052 instance=ExtResource("1_3y4iq")]
@@ -95,4 +99,20 @@ autoplay = "default"
 frame = 3
 frame_progress = 0.5710777
 
+[node name="Area2D2" type="Area2D" parent="." unique_id=2006824928]
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("6_ylt4s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=1345071780]
+position = Vector2(280, -160)
+shape = SubResource("RectangleShape2D_076sl")
+debug_color = Color(0.104352735, 0.63923955, 0.31981808, 0.41960785)
+
+[node name="BlockStack" type="TileMapLayer" parent="Area2D2" unique_id=1431885792]
+tile_map_data = PackedByteArray("AAAPAPT/AQAAAAAAAGAPAPX/AQAAAAAAAGAPAPb/AQAAAAAAAGAPAPf/AQAAAAAAAGA=")
+enabled = false
+tile_set = ExtResource("2_j1kd0")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]

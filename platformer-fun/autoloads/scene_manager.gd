@@ -14,6 +14,7 @@ const levels: Array[String] = [
 	
 const pauseScene = preload("res://gui/pause.tscn")
 const mainMenu = "res://gui/main_menu.tscn"
+const credits = "res://addons/CREDITS/GodotCredits.tscn"
 
 func advanceToNextScene() -> void:
 	var currentSceneIndex := getLevelIndex()
@@ -39,6 +40,9 @@ func getLevelIndex() -> int:
 
 func goToMainMenu() -> int:
 	return get_tree().change_scene_to_file(mainMenu)
+
+func goToCreditsScene() -> void:
+	return get_tree().change_scene_to_file(credits)
 
 func addPauseScene() -> void:
 	get_tree().root.add_child(pauseScene.instantiate())

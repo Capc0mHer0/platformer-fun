@@ -12,7 +12,7 @@ extends Control
 
 const section_time := 2.0
 const line_time := 0.3
-const base_speed := 70
+const base_speed := 60
 const speed_up_multiplier := 10.0
 
 var scroll_speed : float = base_speed
@@ -33,37 +33,37 @@ var lines := []
 
 var credits = [
 	[
-		"A game by Awesome Game Company"
+		"Slime King"
 	],[
-		"Programming",
-		"Programmer Name",
-		"Programmer Name 2"
+		"Developers",
+		"CAPC0M HER0",
+		"MiDe"
+	],[
+		"Level Designers",
+		"CAPC0M HER0",
+		"MiDe",
+		"Zenso Si"
 	],[
 		"Art",
-		"Artist Name"
+		"CAPC0M HER0",
+		"MiDe"
 	],[
 		"Music",
-		"Musician Name"
+		"CAPC0M HER0",
+		"MiDe"
 	],[
 		"Sound Effects",
-		"SFX Name"
+		"MiDe"
 	],[
 		"Testers",
-		"Name 1",
-		"Name 2",
-		"Name 3"
+		"Zenso Si",
 	],[
 		"Tools used",
 		"Developed with Godot Engine",
 		"https://godotengine.org/license",
 		"",
-		"Art created with My Favourite Art Program",
-		"https://myfavouriteartprogram.com"
-	],[
-		"Special thanks",
-		"My parents",
-		"My friends",
-		"My pet rabbit"
+		"Some assets from",
+		"https://opengameart.org"
 	]
 ]
 
@@ -107,7 +107,7 @@ func _process(delta):
 	if lines.size() > 0:
 		for l in lines:
 			l.set_global_position(l.get_global_position() - Vector2(0, scroll_speed))
-			if l.get_global_position().y < l.get_line_height():
+			if l.get_global_position().y < 0:
 				lines.erase(l)
 				l.queue_free()
 	elif started:

@@ -57,7 +57,7 @@ stream = ExtResource("5_cxr5p")
 [node name="PlayerHurtBox" type="Area2D" parent="." unique_id=539979327]
 position = Vector2(-0.12046426, -15.882784)
 collision_layer = 2
-collision_mask = 24
+collision_mask = 152
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="PlayerHurtBox" unique_id=963419894]
 position = Vector2(0.5037646, 5.15751)

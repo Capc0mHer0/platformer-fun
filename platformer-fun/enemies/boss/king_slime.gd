@@ -12,3 +12,10 @@ func _ready() -> void:
 func take_damage() -> void:
 	health -= 1
 	healthBar.set_health(health, maxHealth)
+	if health == 0:
+		queue_free()
+
+func _on_area_2d_3_area_entered(area: Area2D) -> void:
+	print("youch")
+	take_damage()
+	

@@ -1,8 +1,10 @@
 extends Node2D
 
-
+@onready var level9 = $".."
 @onready var healthBar: HealthBar = $HealthBar
 @export var maxHealth = 20
+
+
 
 var health: int = maxHealth
 
@@ -14,6 +16,7 @@ func take_damage() -> void:
 	healthBar.set_health(health, maxHealth)
 	if health == 0:
 		queue_free()
+		level9.summonThrone()
 
 func _on_area_2d_3_area_entered(area: Area2D) -> void:
 	print("youch")

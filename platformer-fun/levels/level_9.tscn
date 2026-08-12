@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://d0ds6r1nfsjl5"]
 
 [ext_resource type="PackedScene" uid="uid://b8wqvs0jqugd2" path="res://players/Player.tscn" id="1_3y4iq"]
+[ext_resource type="Script" uid="uid://el6v44l3t1pd" path="res://interactables/GoldenThrone.gd" id="1_a72wi"]
 [ext_resource type="TileSet" uid="uid://bgfmbi242xq0v" path="res://assets/tile_maps/palace.tres" id="2_j1kd0"]
 [ext_resource type="Texture2D" uid="uid://cmfer2r1pwhu7" path="res://assets/sprites/pedestal.png" id="3_8bky6"]
 [ext_resource type="Script" uid="uid://ksq0wdhmn0j8" path="res://interactables/Pedestal.gd" id="3_igtvg"]
@@ -154,6 +155,7 @@ animations = [{
 size = Vector2(16, 32)
 
 [node name="Level 9" type="Node2D" unique_id=1007605207]
+script = ExtResource("1_a72wi")
 
 [node name="Player" parent="." unique_id=1688831052 instance=ExtResource("1_3y4iq")]
 
@@ -218,3 +220,4 @@ disabled = true
 
 [connection signal="body_entered" from="Pedestal" to="Pedestal" method="_on_body_entered"]
 [connection signal="body_entered" from="BlockStack" to="BlockStack" method="_on_body_entered"]
+[connection signal="body_entered" from="Golden_Throne" to="." method="_on_golden_throne_body_entered"]

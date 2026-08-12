@@ -13,7 +13,7 @@ config_version=5
 config/name="Platformer_fun"
 run/main_scene="uid://1s8c7r15rbai"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dv82133cr26ah"
 
 [audio]
 

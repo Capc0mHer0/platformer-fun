@@ -10,7 +10,8 @@ const levels: Array[String] = [
 	"res://levels/level_5.tscn",
 	"res://levels/level_6.tscn",
 	"res://levels/level_7.tscn",
-	"res://levels/level_8.tscn"]
+	"res://levels/level_8.tscn",
+	"res://levels/level_9.tscn"]
 	
 const pauseScene = preload("res://gui/pause.tscn")
 const mainMenu = "res://gui/main_menu.tscn"

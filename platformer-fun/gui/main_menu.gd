@@ -3,6 +3,11 @@ extends Control
 @export var settingsScene: PackedScene
 @export var levelSelectScene: PackedScene
 
+func _ready() -> void:
+	MusicPlayer.stop()
+	MusicPlayer.play_level_songs()
+
+
 func _on_start_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://levels/level_1.tscn")
 

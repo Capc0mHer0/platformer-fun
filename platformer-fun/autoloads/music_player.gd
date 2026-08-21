@@ -7,6 +7,9 @@ var songs: Array[AudioStream] = []
 
 func _ready() -> void:
 	load_songs_from_folder()
+	play_level_songs()
+	
+func play_level_songs() -> void:
 	if songs.size() <= 0:
 		return
 	var random_index: int = randi() % songs.size()

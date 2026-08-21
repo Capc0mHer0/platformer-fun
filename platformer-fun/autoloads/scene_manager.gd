@@ -20,7 +20,7 @@ const credits = "res://addons/CREDITS/GodotCredits.tscn"
 func advanceToNextScene() -> void:
 	var currentSceneIndex := getLevelIndex()
 	if currentSceneIndex >= levels.size() - 1:
-		get_tree().quit()
+		SceneManager.call_deferred("goToCreditsScene")
 	elif currentSceneIndex == -1:
 		print("Could not find current scene in levels array: ", get_tree().current_scene.scene_file_path)
 	else:

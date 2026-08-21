@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c41qy1turquae"]
 
-[ext_resource type="Texture2D" uid="uid://b6g1j4lacgkpb" path="res://assets/sprites/death-skull.svg" id="1_0jo8p"]
 [ext_resource type="Script" uid="uid://b1ru3o7xbmuaa" path="res://gui/level_select.gd" id="1_6f0w6"]
+[ext_resource type="Texture2D" uid="uid://dv82133cr26ah" path="res://assets/sprites/slime_king_icon.png" id="2_6f0w6"]
 
 [node name="LevelSelect" type="Control" unique_id=1627906341]
 layout_mode = 3
@@ -48,7 +48,6 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 8
-text = "5."
 horizontal_alignment = 1
 vertical_alignment = 2
 
@@ -78,7 +77,6 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 8
-text = "5."
 horizontal_alignment = 1
 vertical_alignment = 2
 
@@ -269,8 +267,8 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 32
-icon = ExtResource("1_0jo8p")
+theme_override_font_sizes/font_size = 16
+icon = ExtResource("2_6f0w6")
 icon_alignment = 1
 expand_icon = true
 

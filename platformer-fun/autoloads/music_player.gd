@@ -1,6 +1,7 @@
 extends AudioStreamPlayer
 
-const MUSIC_FOLDER = "res://assets/music/"
+const MUSIC_FOLDER = "res://assets/music/level_songs/"
+const SLIME_KING_THEME = "res://assets/music/enterSlimeKing1.1.wav"
 
 var songs: Array[AudioStream] = []
 
@@ -10,6 +11,10 @@ func _ready() -> void:
 		return
 	var random_index: int = randi() % songs.size()
 	stream = songs[random_index]
+	play()
+	
+func play_slime_king_theme() -> void:
+	stream = load(SLIME_KING_THEME)
 	play()
 
 func load_songs_from_folder() -> void:

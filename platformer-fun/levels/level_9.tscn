@@ -9,6 +9,9 @@
 [ext_resource type="Script" uid="uid://1it4tj5il7wu" path="res://levels/entrance_block_off.gd" id="6_ylt4s"]
 [ext_resource type="PackedScene" uid="uid://0arfgyo7ssk3" path="res://enemies/boss/KingSlime.tscn" id="7_076sl"]
 [ext_resource type="Texture2D" uid="uid://cnyveyb8627tn" path="res://assets/sprites/Golden Throne.png" id="8_x8804"]
+[ext_resource type="Script" uid="uid://db57dsjelq0w" path="res://interactables/end_flag.gd" id="9_lh5ve"]
+[ext_resource type="AudioStream" uid="uid://rwhuwirpg0xt" path="res://assets/sounds/complete.wav" id="11_qohi0"]
+[ext_resource type="PackedScene" uid="uid://b1niuumeuysmi" path="res://gui/level_timer.tscn" id="12_pf0k2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ylt4s"]
 size = Vector2(16, 29)
@@ -200,12 +203,13 @@ enabled = false
 tile_set = ExtResource("2_j1kd0")
 
 [node name="KingSlime" parent="." unique_id=602595480 instance=ExtResource("7_076sl")]
-position = Vector2(568, -144)
+position = Vector2(568, -152)
 
 [node name="Golden_Throne" type="Area2D" parent="." unique_id=1666076972]
 visible = false
 collision_layer = 4
 collision_mask = 2
+script = ExtResource("9_lh5ve")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Golden_Throne" unique_id=33479672]
 position = Vector2(568, -144)
@@ -218,6 +222,11 @@ position = Vector2(568, -144)
 shape = SubResource("RectangleShape2D_v1sno")
 disabled = true
 
+[node name="CompleteSound" type="AudioStreamPlayer2D" parent="Golden_Throne" unique_id=152203519]
+stream = ExtResource("11_qohi0")
+
+[node name="Timer" parent="Golden_Throne" unique_id=774195140 instance=ExtResource("12_pf0k2")]
+
 [connection signal="body_entered" from="Pedestal" to="Pedestal" method="_on_body_entered"]
 [connection signal="body_entered" from="BlockStack" to="BlockStack" method="_on_body_entered"]
-[connection signal="body_entered" from="Golden_Throne" to="." method="_on_golden_throne_body_entered"]
+[connection signal="body_entered" from="Golden_Throne" to="Golden_Throne" method="_on_body_entered"]

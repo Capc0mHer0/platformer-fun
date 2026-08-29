@@ -19,7 +19,7 @@ func center_window() -> void:
 	var window_size = get_window().get_size_with_decorations()
 	get_window().set_position(center_screen-window_size / 2)
 	
-func set_resolution(new_resolution: Vector2i) -> void:
+func set_resolution(new_resolution: Vector2i = get_window().get_size()) -> void:
 	get_tree().root.content_scale_factor = (new_resolution / base_resolution).x
 	get_window().set_size(new_resolution)
 	center_window()

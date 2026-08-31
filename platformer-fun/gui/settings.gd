@@ -35,6 +35,8 @@ func _on_option_button_item_selected(index) -> void:
 func _on_check_box_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		get_window().set_mode(Window.MODE_FULLSCREEN)
+		ResolutionManager.set_resolution()
 	else:
 		get_window().set_mode(Window.MODE_WINDOWED)
 		ResolutionManager.center_window()
+		ResolutionManager.set_resolution()

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://b8wqvs0jqugd2"]
+[gd_scene format=3 uid="uid://wflubpevsw2r"]
 
 [ext_resource type="Script" uid="uid://dnkst32cx4u0c" path="res://players/movement.gd" id="1_kne1u"]
 [ext_resource type="Texture2D" uid="uid://bvk2vphkomul1" path="res://assets/backgrounds/ice.png" id="2_e80uo"]

@@ -6,6 +6,7 @@
 [ext_resource type="TileSet" uid="uid://dpiju2lqyil3b" path="res://assets/tile-maps/ground-tilemap.tres" id="3_n46q3"]
 [ext_resource type="TileSet" uid="uid://ci8dw363ro4ec" path="res://assets/tile-maps/spikes-map.tres" id="6_btoec"]
 
+
 [node name="Level 1" type="Node2D" unique_id=1087465627]
 
 [node name="Player" parent="." unique_id=1688831052 groups=["player"] instance=ExtResource("2_kx6l7")]

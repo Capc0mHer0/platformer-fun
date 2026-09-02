@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b6yffwnpu75qt" path="res://enemies/yellow-slime.tscn" id="4_v5uil"]
 [ext_resource type="PackedScene" uid="uid://0kt3nifteymr" path="res://enemies/red-slime.tscn" id="6_ep78u"]
 
+
 [node name="Node2D" type="Node2D" unique_id=1550481910]
 
 [node name="Player" parent="." unique_id=1688831052 instance=ExtResource("1_0srwa")]

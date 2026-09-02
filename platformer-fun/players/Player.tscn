@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://wmdrc73b50id" path="res://assets/sounds/jump.wav" id="4_e80uo"]
 [ext_resource type="AudioStream" uid="uid://w6h3dd8iti0i" path="res://assets/sounds/death.wav" id="5_cxr5p"]
 [ext_resource type="Script" uid="uid://cfug1ylxomhyd" path="res://players/pause-handler.gd" id="6_tjsbv"]
-[ext_resource type="PackedScene" uid="uid://bbtpkbtn6o2wj" path="res://players/Sword.tscn" id="7_6n4dj"]
+[ext_resource type="PackedScene" uid="uid://bbtpkbtn6o2wj" path="res://players/sword.tscn" id="7_6n4dj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ihfcg"]
 size = Vector2(11.082819, 15.941391)

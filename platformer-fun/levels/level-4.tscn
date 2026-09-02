@@ -16,7 +16,7 @@
 [node name="GreenSlime2" parent="." unique_id=1667255226 instance=ExtResource("3_86l0o")]
 position = Vector2(510, 15)
 
-[node name="Player" parent="." unique_id=1688831052 groups=["player"] instance=ExtResource("2_5cm8g")]
+[node name="Player" parent="." unique_id=1688831052 instance=ExtResource("2_5cm8g")]
 position = Vector2(-30, 13)
 collision_mask = 21
 

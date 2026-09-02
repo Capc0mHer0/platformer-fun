@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://citksy7vxdxpe"]
+
+[ext_resource type="Script" uid="uid://dvmlhwbvg5apa" path="res://enemies/ghost-slime-movement.gd" id="1_try6i"]
+[ext_resource type="Texture2D" uid="uid://eo0ss06umgfo" path="res://assets/sprites/ghostslime.png" id="2_wg3lh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ot28"]
+size = Vector2(31, 9.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aerfg"]
+size = Vector2(33, 4)
+
+[node name="CharacterBody2D5" type="CharacterBody2D" unique_id=2034222891]
+collision_layer = 8
+collision_mask = 26
+script = ExtResource("1_try6i")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2005818589]
+position = Vector2(3, -16)
+texture = ExtResource("2_wg3lh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=99563854]
+position = Vector2(2.5, -5.625)
+shape = SubResource("RectangleShape2D_5ot28")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=170743564]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=939830627]
+position = Vector2(2.5, -12)
+shape = SubResource("RectangleShape2D_aerfg")
+debug_color = Color(0.84342897, 0.107279785, 0.13430479, 0.41960785)
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1668818424]
+position = Vector2(1, -8)
+rect = Rect2(-14, -2, 31, 9)
+
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="screen_entered" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_on_visible_on_screen_enabler_2d_screen_exited"]

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://6max7nus0lwh"]
+
+[ext_resource type="Script" uid="uid://db57dsjelq0w" path="res://interactables/end-flag.gd" id="1_4anwy"]
+[ext_resource type="Texture2D" uid="uid://ck683spfmbvmi" path="res://assets/sprites/flag-red-green.png" id="2_jv4ou"]
+[ext_resource type="AudioStream" uid="uid://rwhuwirpg0xt" path="res://assets/sounds/complete.wav" id="3_jv4ou"]
+[ext_resource type="PackedScene" uid="uid://b1niuumeuysmi" path="res://gui/level-timer.tscn" id="4_830kh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjebc"]
+size = Vector2(23.000214, 50.000015)
+
+[node name="Area2D" type="Area2D" unique_id=379006929]
+scale = Vector2(0.21542072, 0.20898841)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_4anwy")
+
+[node name="end flag" type="Sprite2D" parent="." unique_id=565360711]
+texture = ExtResource("2_jv4ou")
+region_enabled = true
+region_rect = Rect2(4, 254, 107, 243)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=282880785]
+position = Vector2(0.11425781, -1.8762207)
+scale = Vector2(4.6420784, 4.7849536)
+shape = SubResource("RectangleShape2D_bjebc")
+
+[node name="CompleteSound" type="AudioStreamPlayer2D" parent="." unique_id=1837935076]
+stream = ExtResource("3_jv4ou")
+
+[node name="Timer" parent="." unique_id=774195140 instance=ExtResource("4_830kh")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

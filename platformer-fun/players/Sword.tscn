@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bbtpkbtn6o2wj"]
 
 [ext_resource type="Script" uid="uid://ct2ny77eafyn6" path="res://players/sword.gd" id="1_7msh1"]
-[ext_resource type="Texture2D" uid="uid://cxfnu16d7ktgw" path="res://assets/sprites/shiny sword.png" id="1_bsdrt"]
+[ext_resource type="Texture2D" uid="uid://cxfnu16d7ktgw" path="res://assets/sprites/shiny-sword.png" id="1_bsdrt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7msh1"]
 size = Vector2(21.902695, 6.7293053)

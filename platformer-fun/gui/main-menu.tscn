@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://1s8c7r15rbai"]
+
+[ext_resource type="Script" uid="uid://bkkd8o0n0t6sx" path="res://gui/main-menu.gd" id="1_06t4h"]
+[ext_resource type="PackedScene" uid="uid://c2p7kajmkvxow" path="res://gui/settings.tscn" id="2_7vrkn"]
+[ext_resource type="PackedScene" uid="uid://c41qy1turquae" path="res://gui/level-select.tscn" id="3_rhnsr"]
+
+[node name="MainMenu" type="Control" unique_id=90294234]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06t4h")
+settingsScene = ExtResource("2_7vrkn")
+levelSelectScene = ExtResource("3_rhnsr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1391265766]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.1
+anchor_right = 1.0
+anchor_bottom = 0.418
+offset_left = 0.16796875
+offset_right = -0.16802979
+offset_bottom = -0.17602539
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 64
+text = "King Jump"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=493688005]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.544
+anchor_right = 0.65
+anchor_bottom = 0.77800006
+offset_top = 0.04397583
+offset_bottom = -0.044036865
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=44908894]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Start Game"
+
+[node name="LevelSelectButton" type="Button" parent="VBoxContainer" unique_id=1416476005]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Level Select"
+
+[node name="SettingsButton" type="Button" parent="VBoxContainer" unique_id=1395449538]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Settings"
+
+[node name="EndGame" type="Button" parent="VBoxContainer" unique_id=2125115414]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/EndGame" to="." method="_on_end_game_pressed"]
